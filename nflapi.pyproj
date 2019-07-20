@@ -28,6 +28,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="nflapi.py" />
+    <Compile Include="nflapi\API.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="nflapi\ScheduleContentHandler.py">
       <SubType>Code</SubType>
     </Compile>
