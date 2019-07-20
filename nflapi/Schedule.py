@@ -3,11 +3,12 @@ from urllib3 import PoolManager
 import pandas
 import xml.sax
 from typing import TypeVar
+from nflapi.API import API
 from nflapi.ScheduleContentHandler import ScheduleContentHandler
 
 ListOrDataFrame = TypeVar("ListOrDataFrame", list, pandas.DataFrame)
 
-class Schedule(object):
+class Schedule(API):
     """
     Retrieve game schedules
     """
@@ -15,9 +16,8 @@ class Schedule(object):
     _url : str = "http://www.nfl.com/ajax/scorestrip"
 
     def __init__(self):
+        super(Schedule, self).__init__(ScheduleContentHandler())
         self._cache = None
-        self._handler = ScheduleContentHandler()
-        self._http = PoolManager()
 
     def getSchedule(self, season : int, season_type : str, week : int, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
         data = None
@@ -35,13 +35,6 @@ class Schedule(object):
     def _queryAndParse(self, season : int, season_type : str, week : int):
         xmlstr = self._queryAPI(Schedule._url, {"season": season, "seasonType": season_type, "week": week})
         self._parseXML(xmlstr)
-
-    def _queryAPI(self, srcurl : str, query_doc : dict) -> str:
-        rslt = self._http.request("GET", srcurl, fields=query_doc)
-        return rslt.data.decode("utf-8")
-
-    def _parseXML(self, xmlstr):
-        xml.sax.parseString(xmlstr, self._handler)
 
     def _isInCache(self, season : int, season_type : str, week : int) -> bool:
         cached = False
