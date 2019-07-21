@@ -2,60 +2,81 @@ import os
 from urllib3 import PoolManager
 import pandas
 import xml.sax
-from typing import TypeVar
-from nflapi.API import API
+from nflapi.CachedAPI import CachedAPI, CachedRowFilter, ListOrDataFrame
 from nflapi.ScheduleContentHandler import ScheduleContentHandler
 
-ListOrDataFrame = TypeVar("ListOrDataFrame", list, pandas.DataFrame)
-
-class Schedule(API):
+class ScheduleRowFilter(CachedRowFilter):
+    """Internal class used by the Schedule class
+    
+    This is used by the Schedule class to filter cached rows
     """
-    Retrieve game schedules
-    """
+    def __init__(self, season : int, season_type : str, week : int):
+        self._season = season
+        self._season_type = season_type
+        self._week = week
 
-    _url : str = "http://www.nfl.com/ajax/scorestrip"
+    def test(self, row : tuple) -> bool:
+        return getattr(row, "season") == self._season and getattr(row, "season_type") == self._season_type and getattr(row, "week") == self._week
+
+class Schedule(CachedAPI):
+    """Retrieve game schedules
+
+    This is used to retrieve the schedule of games for a given
+    season, season type and week. The request may be for a
+    past or future week.
+
+    Methods
+    -------
+    getSchedule(season : int, season_type : str, week : int,
+                return_type : ListOrDataFrame = list) -> ListOrDataFrame
+    """
 
     def __init__(self):
-        super(Schedule, self).__init__(ScheduleContentHandler())
-        self._cache = None
+        """Constructor for the Schedule class"""
+        super(Schedule, self).__init__("http://www.nfl.com/ajax/scorestrip", ScheduleContentHandler())
 
     def getSchedule(self, season : int, season_type : str, week : int, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
-        data = None
-        if self._isInCache(season, season_type, week):
-            data = self._fromCache(season, season_type, week, return_type)
-        else:
-            self._queryAndParse(season, season_type, week)
-            if issubclass(return_type, pandas.DataFrame):
-                data = self._handler.dataframe
-            else:
-                data = self._handler.list
-            self._toCache(data)
-        return data
-   
-    def _queryAndParse(self, season : int, season_type : str, week : int):
-        xmlstr = self._queryAPI(Schedule._url, {"season": season, "seasonType": season_type, "week": week})
-        self._parseXML(xmlstr)
+        """Retrieve games played or to be played for a given week
+        
+        This retrieves information about games played or to be
+        played for a given week of the NFL season.
 
-    def _isInCache(self, season : int, season_type : str, week : int) -> bool:
-        cached = False
-        if self._cache is not None:
-            cached = any(self._getCacheRowVec(season, season_type, week))
-        return cached
+        Parameters
+        ----------
+        season : int
+            The four digit year at the beginning of the NFL season
+        season_type : str {"PRE", "REG", "POST"}
+            PRE, for preseason, REG, for the regular season, or POST, for
+            post-season
+        week : int
+            The week to retrieve data for. For PRE this is a number from 0 to 4.
+            For REG this is a number from 1 to 17. For POST this is a number
+            from 1 to 4.
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
 
-    def _getCacheRowVec(self, season : int, season_type : str, week : int) -> list:
-        return [getattr(row, "season") == season and getattr(row, "season_type") == season_type and getattr(row, "week") == week for row in self._cache.itertuples(index=False)]
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        assert season_type in ["PRE", "REG", "POST"]
+        wrng = range(1, 18)
+        if season_type == "PRE":
+            wrng = range(0, 5)
+        elif season_type == "POST":
+            wrng = range(1, 5)
+        assert week in wrng
 
-    def _toCache(self, data : ListOrDataFrame):
-        if issubclass(type(data), list):
-            data = pandas.DataFrame(data)
-        if self._cache is None:
-            self._cache = data
-        else:
-            self._cache = self._cache.append(data, ignore_index=True)
-
-    def _fromCache(self, season : int, season_type : str, week : int, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
-        x = self._getCacheRowVec(season, season_type, week)
-        data = self._cache[x]
-        if issubclass(return_type, list):
-            data = data.to_dict(orient="records")
-        return data
+        if season_type == "POST":
+            week += 17
+            if week == 21:
+                # The 21'st week is an off week between the conference final
+                # and the super bowl. To allow the caller to not have to
+                # know that we just add one more to the request.
+                week += 1
+        query = {"season": season, "seasonType": season_type, "week": week}
+        rf = ScheduleRowFilter(season, season_type, week)
+        return self._fetch(query, rf, return_type)

@@ -31,6 +31,10 @@
     <Compile Include="nflapi\API.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="nflapi\CachedAPI.py" />
+    <Compile Include="nflapi\AbstractContentHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="nflapi\ScheduleContentHandler.py">
       <SubType>Code</SubType>
     </Compile>

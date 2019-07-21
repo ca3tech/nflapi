@@ -104,6 +104,6 @@ class MockSchedule(Schedule):
         with open(newpath, "rt") as fh:
             self._xmlstr = "".join(fh.readlines())
 
-    def _queryAPI(self, srcurl : str, query_doc : dict) -> str:
+    def _queryAPI(self, query_doc : dict) -> str:
         self._qapi_count += 1
         return self._xmlstr
