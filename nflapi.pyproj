@@ -27,6 +27,9 @@
     <OutputPath>bin\Test\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="nflapi\RosterContentHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="nflapi.py" />
     <Compile Include="nflapi\API.py">
       <SubType>Code</SubType>
@@ -52,7 +55,6 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\" />
     <Folder Include="nflapi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
