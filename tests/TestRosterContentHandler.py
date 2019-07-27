@@ -127,14 +127,12 @@ class TestRosterContentHandler(unittest.TestCase):
         with StringIO() as doc:
             doc.write("<data>")
             with open("tests/data/roster_kc.html") as fp:
-                soup = BeautifulSoup(fp)
+                soup = BeautifulSoup(fp, "html.parser")
                 for tag in soup.find_all(["meta", "a"]):
                     doc.write(str(tag))
                 doc.write("</data>")
-            with open("tests/data/roster_kc.xml", "wt") as ofp:
-                ofp.write(doc.getvalue())
             xml.sax.parseString(doc.getvalue(), self.handler)
         data = self.handler.list
-        with open("tests/data/roster_kc.json", "rt") as fp:
+        with open("tests/data/roster_kc_domain_override.json", "rt") as fp:
             xdata = json.load(fp)
             self.assertEqual(data, xdata)

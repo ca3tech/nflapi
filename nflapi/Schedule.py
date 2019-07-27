@@ -16,7 +16,10 @@ class ScheduleRowFilter(CachedRowFilter):
         self._week = week
 
     def test(self, row : tuple) -> bool:
-        return getattr(row, "season") == self._season and getattr(row, "season_type") == self._season_type and getattr(row, "week") == self._week
+        x = False
+        if all([_ in row._fields for _ in ["season", "season_type", "week"]]):
+            x = row.season == self._season and row.season_type == self._season_type and row.week == self._week
+        return x
 
 class Schedule(CachedAPI):
     """Retrieve game schedules
