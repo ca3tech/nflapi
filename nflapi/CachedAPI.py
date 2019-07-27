@@ -24,7 +24,7 @@ class CachedAPI(API):
         if self._isInCache(row_filter):
             data = self._fromCache(row_filter, return_type)
         else:
-            self._parseXML(self._queryAPI(query))
+            self._parseDocument(self._queryAPI(query))
             if issubclass(return_type, pandas.DataFrame):
                 data = self._handler.dataframe
             else:

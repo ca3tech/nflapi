@@ -4,8 +4,8 @@ import re
 import json
 import pandas
 import time
-from typing import TypeVar
-from nflapi.Schedule import Schedule, ListOrDataFrame
+from nflapi.CachedAPI import ListOrDataFrame
+from nflapi.Schedule import Schedule
 
 class TestSchedule(TestCase):
     """ Test the Schedule class """
@@ -88,7 +88,6 @@ class TestSchedule(TestCase):
 class MockSchedule(Schedule):
     def __init__(self, xmlpath : str):
         super(MockSchedule, self).__init__()
-        self._xmlpath = None
         self.xmlpath = xmlpath
         self._qapi_count = 0
 
