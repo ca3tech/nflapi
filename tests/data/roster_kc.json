@@ -1,0 +1,722 @@
+[
+    {
+        "profile_id": 2562399,
+        "profile_name": "nickallegretti",
+        "profile_url": "http://my.test.com/player/nickallegretti/2562399/profile",
+        "team": "KC",
+        "last_name": "Allegretti",
+        "first_name": "Nick"
+    },
+    {
+        "profile_id": 2543717,
+        "profile_name": "jeremiahattaochu",
+        "profile_url": "http://my.test.com/player/jeremiahattaochu/2543717/profile",
+        "team": "KC",
+        "last_name": "Attaochu",
+        "first_name": "Jeremiah"
+    },
+    {
+        "profile_id": 2563336,
+        "profile_name": "abdulbeecham",
+        "profile_url": "http://my.test.com/player/abdulbeecham/2563336/profile",
+        "team": "KC",
+        "last_name": "Beecham",
+        "first_name": "Abdul"
+    },
+    {
+        "profile_id": 2552478,
+        "profile_name": "blakebell",
+        "profile_url": "http://my.test.com/player/blakebell/2552478/profile",
+        "team": "KC",
+        "last_name": "Bell",
+        "first_name": "Blake"
+    },
+    {
+        "profile_id": 2563106,
+        "profile_name": "dinoboyd",
+        "profile_url": "http://my.test.com/player/dinoboyd/2563106/profile",
+        "team": "KC",
+        "last_name": "Boyd",
+        "first_name": "Dino"
+    },
+    {
+        "profile_id": 2543571,
+        "profile_name": "bashaudbreeland",
+        "profile_url": "http://my.test.com/player/bashaudbreeland/2543571/profile",
+        "team": "KC",
+        "last_name": "Breeland",
+        "first_name": "Bashaud"
+    },
+    {
+        "profile_id": 2558245,
+        "profile_name": "harrisonbutker",
+        "profile_url": "http://my.test.com/player/harrisonbutker/2558245/profile",
+        "team": "KC",
+        "last_name": "Butker",
+        "first_name": "Harrison"
+    },
+    {
+        "profile_id": 2563337,
+        "profile_name": "joshcaldwell",
+        "profile_url": "http://my.test.com/player/joshcaldwell/2563337/profile",
+        "team": "KC",
+        "last_name": "Caldwell",
+        "first_name": "Josh"
+    },
+    {
+        "profile_id": 2552629,
+        "profile_name": "frankclark",
+        "profile_url": "http://my.test.com/player/frankclark/2552629/profile",
+        "team": "KC",
+        "last_name": "Clark",
+        "first_name": "Frank"
+    },
+    {
+        "profile_id": 2506438,
+        "profile_name": "dustincolquitt",
+        "profile_url": "http://my.test.com/player/dustincolquitt/2506438/profile",
+        "team": "KC",
+        "last_name": "Colquitt",
+        "first_name": "Dustin"
+    },
+    {
+        "profile_id": 2562551,
+        "profile_name": "jamalcustis",
+        "profile_url": "http://my.test.com/player/jamalcustis/2562551/profile",
+        "team": "KC",
+        "last_name": "Custis",
+        "first_name": "Jamal"
+    },
+    {
+        "profile_id": 2562640,
+        "profile_name": "feltondavis",
+        "profile_url": "http://my.test.com/player/feltondavis/2562640/profile",
+        "team": "KC",
+        "last_name": "Davis",
+        "first_name": "Felton"
+    },
+    {
+        "profile_id": 2559461,
+        "profile_name": "rasharddavis",
+        "profile_url": "http://my.test.com/player/rasharddavis/2559461/profile",
+        "team": "KC",
+        "last_name": "Davis",
+        "first_name": "Rashard"
+    },
+    {
+        "profile_id": 2561484,
+        "profile_name": "raymonddavison",
+        "profile_url": "http://my.test.com/player/raymonddavison/2561484/profile",
+        "team": "KC",
+        "last_name": "Davison",
+        "first_name": "Raymond"
+    },
+    {
+        "profile_id": 2559066,
+        "profile_name": "gehrigdieter",
+        "profile_url": "http://my.test.com/player/gehrigdieter/2559066/profile",
+        "team": "KC",
+        "last_name": "Dieter",
+        "first_name": "Gehrig"
+    },
+    {
+        "profile_id": 2543816,
+        "profile_name": "laurentduvernay-tardif",
+        "profile_url": "http://my.test.com/player/laurentduvernay-tardif/2543816/profile",
+        "team": "KC",
+        "last_name": "Duvernay-Tardif",
+        "first_name": "Laurent"
+    },
+    {
+        "profile_id": 2552240,
+        "profile_name": "cameronerving",
+        "profile_url": "http://my.test.com/player/cameronerving/2552240/profile",
+        "team": "KC",
+        "last_name": "Erving",
+        "first_name": "Cameron"
+    },
+    {
+        "profile_id": 2562649,
+        "profile_name": "rashadfenton",
+        "profile_url": "http://my.test.com/player/rashadfenton/2562649/profile",
+        "team": "KC",
+        "last_name": "Fenton",
+        "first_name": "Rashad"
+    },
+    {
+        "profile_id": 2562442,
+        "profile_name": "markfields",
+        "profile_url": "http://my.test.com/player/markfields/2562442/profile",
+        "team": "KC",
+        "last_name": "Fields",
+        "first_name": "Mark"
+    },
+    {
+        "profile_id": 2539213,
+        "profile_name": "ericfisher",
+        "profile_url": "http://my.test.com/player/ericfisher/2539213/profile",
+        "team": "KC",
+        "last_name": "Fisher",
+        "first_name": "Eric"
+    },
+    {
+        "profile_id": 2563259,
+        "profile_name": "joefortson",
+        "profile_url": "http://my.test.com/player/joefortson/2563259/profile",
+        "team": "KC",
+        "last_name": "Fortson",
+        "first_name": "Jody"
+    },
+    {
+        "profile_id": 2562267,
+        "profile_name": "jackfox",
+        "profile_url": "http://my.test.com/player/jackfox/2562267/profile",
+        "team": "KC",
+        "last_name": "Fox",
+        "first_name": "Jack"
+    },
+    {
+        "profile_id": 2555349,
+        "profile_name": "kendallfuller",
+        "profile_url": "http://my.test.com/player/kendallfuller/2555349/profile",
+        "team": "KC",
+        "last_name": "Fuller",
+        "first_name": "Kendall"
+    },
+    {
+        "profile_id": 2561529,
+        "profile_name": "zackgolditch",
+        "profile_url": "http://my.test.com/player/zackgolditch/2561529/profile",
+        "team": "KC",
+        "last_name": "Golditch",
+        "first_name": "Zack"
+    },
+    {
+        "profile_id": 2560997,
+        "profile_name": "davongrayson",
+        "profile_url": "http://my.test.com/player/davongrayson/2560997/profile",
+        "team": "KC",
+        "last_name": "Grayson",
+        "first_name": "Davon"
+    },
+    {
+        "profile_id": 2553531,
+        "profile_name": "justinhamilton",
+        "profile_url": "http://my.test.com/player/justinhamilton/2553531/profile",
+        "team": "KC",
+        "last_name": "Hamilton",
+        "first_name": "Justin"
+    },
+    {
+        "profile_id": 2562580,
+        "profile_name": "mecolehardman",
+        "profile_url": "http://my.test.com/player/mecolehardman/2562580/profile",
+        "team": "KC",
+        "last_name": "Hardman",
+        "first_name": "Mecole"
+    },
+    {
+        "profile_id": 2563108,
+        "profile_name": "dariusharris",
+        "profile_url": "http://my.test.com/player/dariusharris/2563108/profile",
+        "team": "KC",
+        "last_name": "Harris",
+        "first_name": "Darius"
+    },
+    {
+        "profile_id": 252,
+        "profile_name": "chadhenne",
+        "profile_url": "http://my.test.com/player/chadhenne/252/profile",
+        "team": "KC",
+        "last_name": "Henne",
+        "first_name": "Chad"
+    },
+    {
+        "profile_id": 2556214,
+        "profile_name": "tyreekhill",
+        "profile_url": "http://my.test.com/player/tyreekhill/2556214/profile",
+        "team": "KC",
+        "last_name": "Hill",
+        "first_name": "Tyreek"
+    },
+    {
+        "profile_id": 2561342,
+        "profile_name": "d'juanhines",
+        "profile_url": "http://my.test.com/player/d'juanhines/2561342/profile",
+        "team": "KC",
+        "last_name": "Hines",
+        "first_name": "D'Juan"
+    },
+    {
+        "profile_id": 2543592,
+        "profile_name": "anthonyhitchens",
+        "profile_url": "http://my.test.com/player/anthonyhitchens/2543592/profile",
+        "team": "KC",
+        "last_name": "Hitchens",
+        "first_name": "Anthony"
+    },
+    {
+        "profile_id": 2561348,
+        "profile_name": "ryanhunter",
+        "profile_url": "http://my.test.com/player/ryanhunter/2561348/profile",
+        "team": "KC",
+        "last_name": "Hunter",
+        "first_name": "Ryan"
+    },
+    {
+        "profile_id": 2543743,
+        "profile_name": "carloshyde",
+        "profile_url": "http://my.test.com/player/carloshyde/2543743/profile",
+        "team": "KC",
+        "last_name": "Hyde",
+        "first_name": "Carlos"
+    },
+    {
+        "profile_id": 2558080,
+        "profile_name": "joeyivie",
+        "profile_url": "http://my.test.com/player/joeyivie/2558080/profile",
+        "team": "KC",
+        "last_name": "Ivie",
+        "first_name": "Joey"
+    },
+    {
+        "profile_id": 2556369,
+        "profile_name": "chrisjones",
+        "profile_url": "http://my.test.com/player/chrisjones/2556369/profile",
+        "team": "KC",
+        "last_name": "Jones",
+        "first_name": "Chris"
+    },
+    {
+        "profile_id": 2553897,
+        "profile_name": "haroldjones-quartey",
+        "profile_url": "http://my.test.com/player/haroldjones-quartey/2553897/profile",
+        "team": "KC",
+        "last_name": "Jones-Quartey",
+        "first_name": "Harold"
+    },
+    {
+        "profile_id": 2561115,
+        "profile_name": "nickkeizer",
+        "profile_url": "http://my.test.com/player/nickkeizer/2561115/profile",
+        "team": "KC",
+        "last_name": "Keizer",
+        "first_name": "Nick"
+    },
+    {
+        "profile_id": 2540258,
+        "profile_name": "traviskelce",
+        "profile_url": "http://my.test.com/player/traviskelce/2540258/profile",
+        "team": "KC",
+        "last_name": "Kelce",
+        "first_name": "Travis"
+    },
+    {
+        "profile_id": 2559076,
+        "profile_name": "marcuskemp",
+        "profile_url": "http://my.test.com/player/marcuskemp/2559076/profile",
+        "team": "KC",
+        "last_name": "Kemp",
+        "first_name": "Marcus"
+    },
+    {
+        "profile_id": 2558185,
+        "profile_name": "tanohkpassagnon",
+        "profile_url": "http://my.test.com/player/tanohkpassagnon/2558185/profile",
+        "team": "KC",
+        "last_name": "Kpassagnon",
+        "first_name": "Tanoh"
+    },
+    {
+        "profile_id": 2555322,
+        "profile_name": "darronlee",
+        "profile_url": "http://my.test.com/player/darronlee/2555322/profile",
+        "team": "KC",
+        "last_name": "Lee",
+        "first_name": "Darron"
+    },
+    {
+        "profile_id": 2560792,
+        "profile_name": "chaselitton",
+        "profile_url": "http://my.test.com/player/chaselitton/2560792/profile",
+        "team": "KC",
+        "last_name": "Litton",
+        "first_name": "Chase"
+    },
+    {
+        "profile_id": 2563112,
+        "profile_name": "johnlovett",
+        "profile_url": "http://my.test.com/player/johnlovett/2563112/profile",
+        "team": "KC",
+        "last_name": "Lovett",
+        "first_name": "John"
+    },
+    {
+        "profile_id": 2555542,
+        "profile_name": "jordanlucas",
+        "profile_url": "http://my.test.com/player/jordanlucas/2555542/profile",
+        "team": "KC",
+        "last_name": "Lucas",
+        "first_name": "Jordan"
+    },
+    {
+        "profile_id": 2558125,
+        "profile_name": "patrickmahomes",
+        "profile_url": "http://my.test.com/player/patrickmahomes/2558125/profile",
+        "team": "KC",
+        "last_name": "Mahomes",
+        "first_name": "Patrick"
+    },
+    {
+        "profile_id": 2563152,
+        "profile_name": "marcusmarshall",
+        "profile_url": "http://my.test.com/player/marcusmarshall/2563152/profile",
+        "team": "KC",
+        "last_name": "Marshall",
+        "first_name": "Marcus"
+    },
+    {
+        "profile_id": 2540180,
+        "profile_name": "tyrannmathieu",
+        "profile_url": "http://my.test.com/player/tyrannmathieu/2540180/profile",
+        "team": "KC",
+        "last_name": "Mathieu",
+        "first_name": "Tyrann"
+    },
+    {
+        "profile_id": 2561492,
+        "profile_name": "robertmccray",
+        "profile_url": "http://my.test.com/player/robertmccray/2561492/profile",
+        "team": "KC",
+        "last_name": "McCray",
+        "first_name": "Robert"
+    },
+    {
+        "profile_id": 2560807,
+        "profile_name": "kahlilmckenzie",
+        "profile_url": "http://my.test.com/player/kahlilmckenzie/2560807/profile",
+        "team": "KC",
+        "last_name": "McKenzie",
+        "first_name": "Kahlil"
+    },
+    {
+        "profile_id": 2563153,
+        "profile_name": "herbmiller",
+        "profile_url": "http://my.test.com/player/herbmiller/2563153/profile",
+        "team": "KC",
+        "last_name": "Miller",
+        "first_name": "Herb"
+    },
+    {
+        "profile_id": 2563113,
+        "profile_name": "dakarimonroe",
+        "profile_url": "http://my.test.com/player/dakarimonroe/2563113/profile",
+        "team": "KC",
+        "last_name": "Monroe",
+        "first_name": "Dakari"
+    },
+    {
+        "profile_id": 2556627,
+        "profile_name": "pacemurphy",
+        "profile_url": "http://my.test.com/player/pacemurphy/2556627/profile",
+        "team": "KC",
+        "last_name": "Murphy",
+        "first_name": "Pace"
+    },
+    {
+        "profile_id": 2561487,
+        "profile_name": "jamesmurray",
+        "profile_url": "http://my.test.com/player/jamesmurray/2561487/profile",
+        "team": "KC",
+        "last_name": "Murray",
+        "first_name": "James"
+    },
+    {
+        "profile_id": 2561383,
+        "profile_name": "benniemann",
+        "profile_url": "http://my.test.com/player/benniemann/2561383/profile",
+        "team": "KC",
+        "last_name": "Niemann",
+        "first_name": "Ben"
+    },
+    {
+        "profile_id": 2560823,
+        "profile_name": "derricknnadi",
+        "profile_url": "http://my.test.com/player/derricknnadi/2560823/profile",
+        "team": "KC",
+        "last_name": "Nnadi",
+        "first_name": "Derrick"
+    },
+    {
+        "profile_id": 2560827,
+        "profile_name": "doriano'daniel",
+        "profile_url": "http://my.test.com/player/doriano'daniel/2560827/profile",
+        "team": "KC",
+        "last_name": "O'Daniel",
+        "first_name": "Dorian"
+    },
+    {
+        "profile_id": 2555278,
+        "profile_name": "emmanuelogbah",
+        "profile_url": "http://my.test.com/player/emmanuelogbah/2555278/profile",
+        "team": "KC",
+        "last_name": "Ogbah",
+        "first_name": "Emmanuel"
+    },
+    {
+        "profile_id": 2539319,
+        "profile_name": "alexokafor",
+        "profile_url": "http://my.test.com/player/alexokafor/2539319/profile",
+        "team": "KC",
+        "last_name": "Okafor",
+        "first_name": "Alex"
+    },
+    {
+        "profile_id": 2562321,
+        "profile_name": "chidiokeke",
+        "profile_url": "http://my.test.com/player/chidiokeke/2562321/profile",
+        "team": "KC",
+        "last_name": "Okeke",
+        "first_name": "Chidi"
+    },
+    {
+        "profile_id": 2560844,
+        "profile_name": "byronpringle",
+        "profile_url": "http://my.test.com/player/byronpringle/2560844/profile",
+        "team": "KC",
+        "last_name": "Pringle",
+        "first_name": "Byron"
+    },
+    {
+        "profile_id": 2555169,
+        "profile_name": "reggieragland",
+        "profile_url": "http://my.test.com/player/reggieragland/2555169/profile",
+        "team": "KC",
+        "last_name": "Ragland",
+        "first_name": "Reggie"
+    },
+    {
+        "profile_id": 2543582,
+        "profile_name": "keithreaser",
+        "profile_url": "http://my.test.com/player/keithreaser/2543582/profile",
+        "team": "KC",
+        "last_name": "Reaser",
+        "first_name": "Keith"
+    },
+    {
+        "profile_id": 2553452,
+        "profile_name": "austinreiter",
+        "profile_url": "http://my.test.com/player/austinreiter/2553452/profile",
+        "team": "KC",
+        "last_name": "Reiter",
+        "first_name": "Austin"
+    },
+    {
+        "profile_id": 2555478,
+        "profile_name": "demarcusrobinson",
+        "profile_url": "http://my.test.com/player/demarcusrobinson/2555478/profile",
+        "team": "KC",
+        "last_name": "Robinson",
+        "first_name": "Demarcus"
+    },
+    {
+        "profile_id": 2562723,
+        "profile_name": "khalensaunders",
+        "profile_url": "http://my.test.com/player/khalensaunders/2562723/profile",
+        "team": "KC",
+        "last_name": "Saunders",
+        "first_name": "Khalen"
+    },
+    {
+        "profile_id": 2532945,
+        "profile_name": "mitchellschwartz",
+        "profile_url": "http://my.test.com/player/mitchellschwartz/2532945/profile",
+        "team": "KC",
+        "last_name": "Schwartz",
+        "first_name": "Mitchell"
+    },
+    {
+        "profile_id": 2495340,
+        "profile_name": "anthonysherman",
+        "profile_url": "http://my.test.com/player/anthonysherman/2495340/profile",
+        "team": "KC",
+        "last_name": "Sherman",
+        "first_name": "Anthony"
+    },
+    {
+        "profile_id": 2562731,
+        "profile_name": "kyleshurmur",
+        "profile_url": "http://my.test.com/player/kyleshurmur/2562731/profile",
+        "team": "KC",
+        "last_name": "Shurmur",
+        "first_name": "Kyle"
+    },
+    {
+        "profile_id": 2561103,
+        "profile_name": "tremonsmith",
+        "profile_url": "http://my.test.com/player/tremonsmith/2561103/profile",
+        "team": "KC",
+        "last_name": "Smith",
+        "first_name": "Tremon"
+    },
+    {
+        "profile_id": 2550257,
+        "profile_name": "danielsorensen",
+        "profile_url": "http://my.test.com/player/danielsorensen/2550257/profile",
+        "team": "KC",
+        "last_name": "Sorensen",
+        "first_name": "Daniel"
+    },
+    {
+        "profile_id": 2563154,
+        "profile_name": "andrewsoroh",
+        "profile_url": "http://my.test.com/player/andrewsoroh/2563154/profile",
+        "team": "KC",
+        "last_name": "Soroh",
+        "first_name": "Andrew"
+    },
+    {
+        "profile_id": 2560881,
+        "profile_name": "breelandspeaks",
+        "profile_url": "http://my.test.com/player/breelandspeaks/2560881/profile",
+        "team": "KC",
+        "last_name": "Speaks",
+        "first_name": "Breeland"
+    },
+    {
+        "profile_id": 2553451,
+        "profile_name": "nealsterling",
+        "profile_url": "http://my.test.com/player/nealsterling/2553451/profile",
+        "team": "KC",
+        "last_name": "Sterling",
+        "first_name": "Neal"
+    },
+    {
+        "profile_id": 2562832,
+        "profile_name": "darwinthompson",
+        "profile_url": "http://my.test.com/player/darwinthompson/2562832/profile",
+        "team": "KC",
+        "last_name": "Thompson",
+        "first_name": "Darwin"
+    },
+    {
+        "profile_id": 2562759,
+        "profile_name": "codythompson",
+        "profile_url": "http://my.test.com/player/codythompson/2562759/profile",
+        "team": "KC",
+        "last_name": "Thompson",
+        "first_name": "Cody"
+    },
+    {
+        "profile_id": 2562761,
+        "profile_name": "juanthornhill",
+        "profile_url": "http://my.test.com/player/juanthornhill/2562761/profile",
+        "team": "KC",
+        "last_name": "Thornhill",
+        "first_name": "Juan"
+    },
+    {
+        "profile_id": 2560911,
+        "profile_name": "d'montrewade",
+        "profile_url": "http://my.test.com/player/d'montrewade/2560911/profile",
+        "team": "KC",
+        "last_name": "Wade",
+        "first_name": "D'Montre"
+    },
+    {
+        "profile_id": 2561285,
+        "profile_name": "cavonwalker",
+        "profile_url": "http://my.test.com/player/cavonwalker/2561285/profile",
+        "team": "KC",
+        "last_name": "Walker",
+        "first_name": "Cavon"
+    },
+    {
+        "profile_id": 2561417,
+        "profile_name": "charvariusward",
+        "profile_url": "http://my.test.com/player/charvariusward/2561417/profile",
+        "team": "KC",
+        "last_name": "Ward",
+        "first_name": "Charvarius"
+    },
+    {
+        "profile_id": 2543457,
+        "profile_name": "sammywatkins",
+        "profile_url": "http://my.test.com/player/sammywatkins/2543457/profile",
+        "team": "KC",
+        "last_name": "Watkins",
+        "first_name": "Sammy"
+    },
+    {
+        "profile_id": 2560921,
+        "profile_name": "armaniwatts",
+        "profile_url": "http://my.test.com/player/armaniwatts/2560921/profile",
+        "team": "KC",
+        "last_name": "Watts",
+        "first_name": "Armani"
+    },
+    {
+        "profile_id": 2560925,
+        "profile_name": "davidwells",
+        "profile_url": "http://my.test.com/player/davidwells/2560925/profile",
+        "team": "KC",
+        "last_name": "Wells",
+        "first_name": "David"
+    },
+    {
+        "profile_id": 2553764,
+        "profile_name": "xavierwilliams",
+        "profile_url": "http://my.test.com/player/xavierwilliams/2553764/profile",
+        "team": "KC",
+        "last_name": "Williams",
+        "first_name": "Xavier"
+    },
+    {
+        "profile_id": 2550512,
+        "profile_name": "damienwilliams",
+        "profile_url": "http://my.test.com/player/damienwilliams/2550512/profile",
+        "team": "KC",
+        "last_name": "Williams",
+        "first_name": "Damien"
+    },
+    {
+        "profile_id": 2560935,
+        "profile_name": "darrelwilliams",
+        "profile_url": "http://my.test.com/player/darrelwilliams/2560935/profile",
+        "team": "KC",
+        "last_name": "Williams",
+        "first_name": "Darrel"
+    },
+    {
+        "profile_id": 2552686,
+        "profile_name": "damienwilson",
+        "profile_url": "http://my.test.com/player/damienwilson/2552686/profile",
+        "team": "KC",
+        "last_name": "Wilson",
+        "first_name": "Damien"
+    },
+    {
+        "profile_id": 2542357,
+        "profile_name": "jameswinchester",
+        "profile_url": "http://my.test.com/player/jameswinchester/2542357/profile",
+        "team": "KC",
+        "last_name": "Winchester",
+        "first_name": "James"
+    },
+    {
+        "profile_id": 2559354,
+        "profile_name": "andrewwylie",
+        "profile_url": "http://my.test.com/player/andrewwylie/2559354/profile",
+        "team": "KC",
+        "last_name": "Wylie",
+        "first_name": "Andrew"
+    },
+    {
+        "profile_id": 2561293,
+        "profile_name": "deonyelder",
+        "profile_url": "http://my.test.com/player/deonyelder/2561293/profile",
+        "team": "KC",
+        "last_name": "Yelder",
+        "first_name": "Deon"
+    }
+]
