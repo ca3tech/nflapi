@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-nflapi = {editable = true,path = "."}
+nflapi = {path = ".",editable = true}
 pandas = "==0.25"
 
 [requires]

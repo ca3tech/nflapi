@@ -46,6 +46,56 @@ class TestPlayerProfile(unittest.TestCase):
         }])
         self.assertTrue(all(pp.getProfile(pandas.DataFrame).eq(exp)))
 
+    def test_getProfile_2nd_call_list(self):
+        roster = self.getRoster("patrickmahomes")
+        pp = MockPlayerProfile(roster, "tests/data/profile_patrick_mahomes.html")
+        pp.getProfile(list)
+        self.assertEqual(pp.queryAPI_count, 1, "query count not expected after 1st call")
+        roster = self.getRoster("tyreekhill")
+        pp.htmlpath = "tests/data/profile_tyreek_hill.html"
+        exp = [{
+            "first_name": "Tyreek",
+            "last_name": "Hill",
+            "profile_id": 2556214,
+            "team": "KC",
+            "height": "5-10",
+            "weight": 185,
+            "age": 25,
+            "born": "3/1/1994 Lauderhill, FL",
+            "college": "West Alabama",
+            "experience": "4th season",
+            "high_school": "Coffee Co. HS [Douglas, GA]"
+        }]
+        self.assertEqual(pp.getProfile(list, roster), exp)
+        self.assertEqual(pp.queryAPI_count, 2, "query count not expected after 2nd call")
+
+    def test_getProfile_uses_cache(self):
+        roster = self.getRoster("patrickmahomes")
+        pp = MockPlayerProfile(roster, "tests/data/profile_patrick_mahomes.html")
+        pp.getProfile(list)
+        self.assertEqual(pp.queryAPI_count, 1, "query count not expected after 1st call")
+        roster = self.getRoster("tyreekhill")
+        pp.htmlpath = "tests/data/profile_tyreek_hill.html"
+        pp.getProfile(list, roster)
+        self.assertEqual(pp.queryAPI_count, 2, "query count not expected after 2nd call")
+        roster = self.getRoster("patrickmahomes")
+        pp.htmlpath = "tests/data/profile_patrick_mahomes.html"
+        exp = [{
+            "first_name": "Patrick",
+            "last_name": "Mahomes",
+            "profile_id": 2558125,
+            "team": "KC",
+            "height": "6-3",
+            "weight": 230,
+            "age": 23,
+            "born": "9/17/1995 Tyler, TX",
+            "college": "Texas Tech",
+            "experience": "3rd season",
+            "high_school": "Whitehouse HS [TX]"
+        }]
+        self.assertEqual(pp.getProfile(list, roster), exp)
+        self.assertEqual(pp.queryAPI_count, 2, "query count not expected after 3rd call")
+
 class MockPlayerProfile(PlayerProfile):
     def __init__(self, roster_data : dict, htmlpath : str):
         super(MockPlayerProfile, self).__init__(roster_data)
