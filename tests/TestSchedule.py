@@ -107,3 +107,6 @@ class MockSchedule(Schedule):
     def _queryAPI(self, query_doc : dict) -> str:
         self._qapi_count += 1
         return self._xmlstr
+
+if __name__ == "__main__":
+    unittest.main()

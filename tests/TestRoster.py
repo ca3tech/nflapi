@@ -37,7 +37,7 @@ class TestRoster(unittest.TestCase):
     def test_getRoster_one_team_live(self):
         obj = Roster()
         rostd = obj.getRoster("KC")
-        xrostd = self.getExpectedResults("tests/data/roster_kc_20190727.json")
+        xrostd = self.getExpectedResults("tests/data/roster_kc_20190810.json")
         self.assertEqual(rostd, xrostd)
 
 class MockRoster(Roster):
@@ -62,6 +62,9 @@ class MockRoster(Roster):
     def _queryAPI(self, query_doc : dict) -> str:
         self._qapi_count += 1
         return self._htmlstr
+
+if __name__ == "__main__":
+    unittest.main()
 
 
 

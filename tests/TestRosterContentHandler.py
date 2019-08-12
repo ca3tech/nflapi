@@ -34,28 +34,43 @@ class TestRosterContentHandler(unittest.TestCase):
         pid = 2558125
         pname = "patrickmahomes"
         purl = f"/player/{pname}/{pid}/profile"
+        csurl = f"{self.domain}/player/{pname}/{pid}/careerstats"
+        gsurl = f"{self.domain}/player/{pname}/{pid}/gamesplits"
+        glurl = f"{self.domain}/player/{pname}/{pid}/gamelogs"
         self.handler.startElement("a", {"href": purl})
         self.assertEqual(self.handler._processing_profile,
                          {"profile_id": pid,
                           "profile_name": "patrickmahomes",
-                          "profile_url": f"{self.domain}{purl}"})
+                          "profile_url": f"{self.domain}{purl}",
+                          "careerstats_url": csurl,
+                          "gamelogs_url": glurl,
+                          "gamesplits_url": gsurl})
 
     def test_startElement_profile_a_tag_after_team(self):
         pid = 2558125
         pname = "patrickmahomes"
         purl = f"/player/{pname}/{pid}/profile"
+        csurl = f"{self.domain}/player/{pname}/{pid}/careerstats"
+        gsurl = f"{self.domain}/player/{pname}/{pid}/gamesplits"
+        glurl = f"{self.domain}/player/{pname}/{pid}/gamelogs"
         self.handler.startElement("meta", {"id": "teamName", "content": "KC"})
         self.handler.startElement("a", {"href": purl})
         self.assertEqual(self.handler._processing_profile,
                          {"profile_id": pid,
                           "profile_name": "patrickmahomes",
                           "profile_url": f"{self.domain}{purl}",
-                           "team": "KC"})
+                          "careerstats_url": csurl,
+                          "gamelogs_url": glurl,
+                          "gamesplits_url": gsurl,
+                          "team": "KC"})
 
     def test_startElement_profile_a_tag_then_characters(self):
         pid = 2558125
         pname = "patrickmahomes"
         purl = f"/player/{pname}/{pid}/profile"
+        csurl = f"{self.domain}/player/{pname}/{pid}/careerstats"
+        gsurl = f"{self.domain}/player/{pname}/{pid}/gamesplits"
+        glurl = f"{self.domain}/player/{pname}/{pid}/gamelogs"
         lname = "Mahomes"
         fname = "Patrick"
         pname = f"{lname}, {fname}"
@@ -65,13 +80,19 @@ class TestRosterContentHandler(unittest.TestCase):
                          {"profile_id": pid,
                           "profile_name": "patrickmahomes",
                           "profile_url": f"{self.domain}{purl}",
-                           "first_name": fname,
-                           "last_name": lname})
+                          "careerstats_url": csurl,
+                          "gamelogs_url": glurl,
+                          "gamesplits_url": gsurl,
+                          "first_name": fname,
+                          "last_name": lname})
 
     def test_startElement_profile_a_tag_then_characters_then_endElement_list(self):
         pid = 2558125
         pname = "patrickmahomes"
         purl = f"/player/{pname}/{pid}/profile"
+        csurl = f"{self.domain}/player/{pname}/{pid}/careerstats"
+        gsurl = f"{self.domain}/player/{pname}/{pid}/gamesplits"
+        glurl = f"{self.domain}/player/{pname}/{pid}/gamelogs"
         lname = "Mahomes"
         fname = "Patrick"
         pname = f"{lname}, {fname}"
@@ -82,6 +103,9 @@ class TestRosterContentHandler(unittest.TestCase):
                          [{"profile_id": pid,
                            "profile_name": "patrickmahomes",
                            "profile_url": f"{self.domain}{purl}",
+                           "careerstats_url": csurl,
+                           "gamelogs_url": glurl,
+                           "gamesplits_url": gsurl,
                            "first_name": fname,
                            "last_name": lname}])
 
@@ -89,6 +113,9 @@ class TestRosterContentHandler(unittest.TestCase):
         pid = 2558125
         pname = "patrickmahomes"
         purl = f"/player/{pname}/{pid}/profile"
+        csurl = f"{self.domain}/player/{pname}/{pid}/careerstats"
+        gsurl = f"{self.domain}/player/{pname}/{pid}/gamesplits"
+        glurl = f"{self.domain}/player/{pname}/{pid}/gamelogs"
         lname = "Mahomes"
         fname = "Patrick"
         pname = f"{lname}, {fname}"
@@ -100,6 +127,9 @@ class TestRosterContentHandler(unittest.TestCase):
                          [{"profile_id": pid,
                            "profile_name": "patrickmahomes",
                            "profile_url": f"{self.domain}{purl}",
+                           "careerstats_url": csurl,
+                           "gamelogs_url": glurl,
+                           "gamesplits_url": gsurl,
                            "team": "KC",
                            "first_name": fname,
                            "last_name": lname}])
@@ -107,6 +137,9 @@ class TestRosterContentHandler(unittest.TestCase):
     def test_startElement_profile_a_tag_then_characters_then_endElement_with_team_dataframe(self):
         pid = 2558125
         pname = "patrickmahomes"
+        csurl = f"{self.domain}/player/{pname}/{pid}/careerstats"
+        gsurl = f"{self.domain}/player/{pname}/{pid}/gamesplits"
+        glurl = f"{self.domain}/player/{pname}/{pid}/gamelogs"
         purl = f"/player/{pname}/{pid}/profile"
         lname = "Mahomes"
         fname = "Patrick"
@@ -116,11 +149,14 @@ class TestRosterContentHandler(unittest.TestCase):
         self.handler.characters(pname)
         self.handler.endElement("a")
         xdf = pandas.DataFrame([{"profile_id": pid,
-                                            "profile_name": "patrickmahomes",
-                                            "profile_url": f"{self.domain}{purl}",
-                                            "team": "KC",
-                                            "first_name": fname,
-                                            "last_name": lname}])
+                                 "profile_name": "patrickmahomes",
+                                 "profile_url": f"{self.domain}{purl}",
+                                 "careerstats_url": csurl,
+                                 "gamelogs_url": glurl,
+                                 "gamesplits_url": gsurl,
+                                 "team": "KC",
+                                 "first_name": fname,
+                                 "last_name": lname}])
         self.assertTrue(all(self.handler.dataframe.eq(xdf, axis="columns")))
 
     def test_document_processing(self):
@@ -136,3 +172,6 @@ class TestRosterContentHandler(unittest.TestCase):
         with open("tests/data/roster_kc_domain_override.json", "rt") as fp:
             xdata = json.load(fp)
             self.assertEqual(data, xdata)
+
+if __name__ == "__main__":
+    unittest.main()

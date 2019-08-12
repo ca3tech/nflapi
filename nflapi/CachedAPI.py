@@ -21,6 +21,29 @@ class CachedAPI(API):
         self._cache = None
 
     def _fetch(self, query : dict, row_filter : CachedRowFilter, return_type : ListOrDataFrame) -> ListOrDataFrame:
+        """The main method of this class
+
+        Subclasses should call this method to do their work. If the
+        results of the query have not already been cached then this
+        will call the objects _parseDocument method to process the
+        query. It will then call the handler to retrieve the results
+        to return to the caller.
+
+        Parameters
+        ----------
+        query : dict
+            Defines the query parameters for the API call if relevant.
+            If not relevant then pass None.
+        row_filter : CachedRowFilter
+            This objects test method will be called to determine if a
+            given cached row is should be returned.
+        return_type : ListOrDataFrame
+            The type of data to return; one of list or pandas.DataFrame
+
+        Returns
+        -------
+        A list of dicts or pandas.DataFrame
+        """
         if self._isInCache(row_filter):
             data = self._fromCache(row_filter, return_type)
         else:

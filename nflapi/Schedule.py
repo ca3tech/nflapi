@@ -83,3 +83,6 @@ class Schedule(CachedAPI):
         query = {"season": season, "seasonType": season_type, "week": week}
         rf = ScheduleRowFilter(season, season_type, week)
         return self._fetch(query, rf, return_type)
+
+    def _parseDocument(self, docstr : str):
+        xml.sax.parseString(docstr, self._handler)

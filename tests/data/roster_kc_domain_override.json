@@ -1,722 +1,992 @@
 [
     {
+        "careerstats_url": "http://my.test.com/player/nickallegretti/2562399/careerstats",
+        "first_name": "Nick",
+        "gamelogs_url": "http://my.test.com/player/nickallegretti/2562399/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/nickallegretti/2562399/gamesplits",
+        "last_name": "Allegretti",
         "profile_id": 2562399,
         "profile_name": "nickallegretti",
         "profile_url": "http://my.test.com/player/nickallegretti/2562399/profile",
-        "team": "KC",
-        "last_name": "Allegretti",
-        "first_name": "Nick"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/jeremiahattaochu/2543717/careerstats",
+        "first_name": "Jeremiah",
+        "gamelogs_url": "http://my.test.com/player/jeremiahattaochu/2543717/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/jeremiahattaochu/2543717/gamesplits",
+        "last_name": "Attaochu",
         "profile_id": 2543717,
         "profile_name": "jeremiahattaochu",
         "profile_url": "http://my.test.com/player/jeremiahattaochu/2543717/profile",
-        "team": "KC",
-        "last_name": "Attaochu",
-        "first_name": "Jeremiah"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/abdulbeecham/2563336/careerstats",
+        "first_name": "Abdul",
+        "gamelogs_url": "http://my.test.com/player/abdulbeecham/2563336/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/abdulbeecham/2563336/gamesplits",
+        "last_name": "Beecham",
         "profile_id": 2563336,
         "profile_name": "abdulbeecham",
         "profile_url": "http://my.test.com/player/abdulbeecham/2563336/profile",
-        "team": "KC",
-        "last_name": "Beecham",
-        "first_name": "Abdul"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/blakebell/2552478/careerstats",
+        "first_name": "Blake",
+        "gamelogs_url": "http://my.test.com/player/blakebell/2552478/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/blakebell/2552478/gamesplits",
+        "last_name": "Bell",
         "profile_id": 2552478,
         "profile_name": "blakebell",
         "profile_url": "http://my.test.com/player/blakebell/2552478/profile",
-        "team": "KC",
-        "last_name": "Bell",
-        "first_name": "Blake"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/dinoboyd/2563106/careerstats",
+        "first_name": "Dino",
+        "gamelogs_url": "http://my.test.com/player/dinoboyd/2563106/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/dinoboyd/2563106/gamesplits",
+        "last_name": "Boyd",
         "profile_id": 2563106,
         "profile_name": "dinoboyd",
         "profile_url": "http://my.test.com/player/dinoboyd/2563106/profile",
-        "team": "KC",
-        "last_name": "Boyd",
-        "first_name": "Dino"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/bashaudbreeland/2543571/careerstats",
+        "first_name": "Bashaud",
+        "gamelogs_url": "http://my.test.com/player/bashaudbreeland/2543571/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/bashaudbreeland/2543571/gamesplits",
+        "last_name": "Breeland",
         "profile_id": 2543571,
         "profile_name": "bashaudbreeland",
         "profile_url": "http://my.test.com/player/bashaudbreeland/2543571/profile",
-        "team": "KC",
-        "last_name": "Breeland",
-        "first_name": "Bashaud"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/harrisonbutker/2558245/careerstats",
+        "first_name": "Harrison",
+        "gamelogs_url": "http://my.test.com/player/harrisonbutker/2558245/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/harrisonbutker/2558245/gamesplits",
+        "last_name": "Butker",
         "profile_id": 2558245,
         "profile_name": "harrisonbutker",
         "profile_url": "http://my.test.com/player/harrisonbutker/2558245/profile",
-        "team": "KC",
-        "last_name": "Butker",
-        "first_name": "Harrison"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/joshcaldwell/2563337/careerstats",
+        "first_name": "Josh",
+        "gamelogs_url": "http://my.test.com/player/joshcaldwell/2563337/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/joshcaldwell/2563337/gamesplits",
+        "last_name": "Caldwell",
         "profile_id": 2563337,
         "profile_name": "joshcaldwell",
         "profile_url": "http://my.test.com/player/joshcaldwell/2563337/profile",
-        "team": "KC",
-        "last_name": "Caldwell",
-        "first_name": "Josh"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/frankclark/2552629/careerstats",
+        "first_name": "Frank",
+        "gamelogs_url": "http://my.test.com/player/frankclark/2552629/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/frankclark/2552629/gamesplits",
+        "last_name": "Clark",
         "profile_id": 2552629,
         "profile_name": "frankclark",
         "profile_url": "http://my.test.com/player/frankclark/2552629/profile",
-        "team": "KC",
-        "last_name": "Clark",
-        "first_name": "Frank"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/dustincolquitt/2506438/careerstats",
+        "first_name": "Dustin",
+        "gamelogs_url": "http://my.test.com/player/dustincolquitt/2506438/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/dustincolquitt/2506438/gamesplits",
+        "last_name": "Colquitt",
         "profile_id": 2506438,
         "profile_name": "dustincolquitt",
         "profile_url": "http://my.test.com/player/dustincolquitt/2506438/profile",
-        "team": "KC",
-        "last_name": "Colquitt",
-        "first_name": "Dustin"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/jamalcustis/2562551/careerstats",
+        "first_name": "Jamal",
+        "gamelogs_url": "http://my.test.com/player/jamalcustis/2562551/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/jamalcustis/2562551/gamesplits",
+        "last_name": "Custis",
         "profile_id": 2562551,
         "profile_name": "jamalcustis",
         "profile_url": "http://my.test.com/player/jamalcustis/2562551/profile",
-        "team": "KC",
-        "last_name": "Custis",
-        "first_name": "Jamal"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/feltondavis/2562640/careerstats",
+        "first_name": "Felton",
+        "gamelogs_url": "http://my.test.com/player/feltondavis/2562640/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/feltondavis/2562640/gamesplits",
+        "last_name": "Davis",
         "profile_id": 2562640,
         "profile_name": "feltondavis",
         "profile_url": "http://my.test.com/player/feltondavis/2562640/profile",
-        "team": "KC",
-        "last_name": "Davis",
-        "first_name": "Felton"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/rasharddavis/2559461/careerstats",
+        "first_name": "Rashard",
+        "gamelogs_url": "http://my.test.com/player/rasharddavis/2559461/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/rasharddavis/2559461/gamesplits",
+        "last_name": "Davis",
         "profile_id": 2559461,
         "profile_name": "rasharddavis",
         "profile_url": "http://my.test.com/player/rasharddavis/2559461/profile",
-        "team": "KC",
-        "last_name": "Davis",
-        "first_name": "Rashard"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/raymonddavison/2561484/careerstats",
+        "first_name": "Raymond",
+        "gamelogs_url": "http://my.test.com/player/raymonddavison/2561484/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/raymonddavison/2561484/gamesplits",
+        "last_name": "Davison",
         "profile_id": 2561484,
         "profile_name": "raymonddavison",
         "profile_url": "http://my.test.com/player/raymonddavison/2561484/profile",
-        "team": "KC",
-        "last_name": "Davison",
-        "first_name": "Raymond"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/gehrigdieter/2559066/careerstats",
+        "first_name": "Gehrig",
+        "gamelogs_url": "http://my.test.com/player/gehrigdieter/2559066/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/gehrigdieter/2559066/gamesplits",
+        "last_name": "Dieter",
         "profile_id": 2559066,
         "profile_name": "gehrigdieter",
         "profile_url": "http://my.test.com/player/gehrigdieter/2559066/profile",
-        "team": "KC",
-        "last_name": "Dieter",
-        "first_name": "Gehrig"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/laurentduvernay-tardif/2543816/careerstats",
+        "first_name": "Laurent",
+        "gamelogs_url": "http://my.test.com/player/laurentduvernay-tardif/2543816/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/laurentduvernay-tardif/2543816/gamesplits",
+        "last_name": "Duvernay-Tardif",
         "profile_id": 2543816,
         "profile_name": "laurentduvernay-tardif",
         "profile_url": "http://my.test.com/player/laurentduvernay-tardif/2543816/profile",
-        "team": "KC",
-        "last_name": "Duvernay-Tardif",
-        "first_name": "Laurent"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/cameronerving/2552240/careerstats",
+        "first_name": "Cameron",
+        "gamelogs_url": "http://my.test.com/player/cameronerving/2552240/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/cameronerving/2552240/gamesplits",
+        "last_name": "Erving",
         "profile_id": 2552240,
         "profile_name": "cameronerving",
         "profile_url": "http://my.test.com/player/cameronerving/2552240/profile",
-        "team": "KC",
-        "last_name": "Erving",
-        "first_name": "Cameron"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/rashadfenton/2562649/careerstats",
+        "first_name": "Rashad",
+        "gamelogs_url": "http://my.test.com/player/rashadfenton/2562649/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/rashadfenton/2562649/gamesplits",
+        "last_name": "Fenton",
         "profile_id": 2562649,
         "profile_name": "rashadfenton",
         "profile_url": "http://my.test.com/player/rashadfenton/2562649/profile",
-        "team": "KC",
-        "last_name": "Fenton",
-        "first_name": "Rashad"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/markfields/2562442/careerstats",
+        "first_name": "Mark",
+        "gamelogs_url": "http://my.test.com/player/markfields/2562442/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/markfields/2562442/gamesplits",
+        "last_name": "Fields",
         "profile_id": 2562442,
         "profile_name": "markfields",
         "profile_url": "http://my.test.com/player/markfields/2562442/profile",
-        "team": "KC",
-        "last_name": "Fields",
-        "first_name": "Mark"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/ericfisher/2539213/careerstats",
+        "first_name": "Eric",
+        "gamelogs_url": "http://my.test.com/player/ericfisher/2539213/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/ericfisher/2539213/gamesplits",
+        "last_name": "Fisher",
         "profile_id": 2539213,
         "profile_name": "ericfisher",
         "profile_url": "http://my.test.com/player/ericfisher/2539213/profile",
-        "team": "KC",
-        "last_name": "Fisher",
-        "first_name": "Eric"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/joefortson/2563259/careerstats",
+        "first_name": "Jody",
+        "gamelogs_url": "http://my.test.com/player/joefortson/2563259/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/joefortson/2563259/gamesplits",
+        "last_name": "Fortson",
         "profile_id": 2563259,
         "profile_name": "joefortson",
         "profile_url": "http://my.test.com/player/joefortson/2563259/profile",
-        "team": "KC",
-        "last_name": "Fortson",
-        "first_name": "Jody"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/jackfox/2562267/careerstats",
+        "first_name": "Jack",
+        "gamelogs_url": "http://my.test.com/player/jackfox/2562267/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/jackfox/2562267/gamesplits",
+        "last_name": "Fox",
         "profile_id": 2562267,
         "profile_name": "jackfox",
         "profile_url": "http://my.test.com/player/jackfox/2562267/profile",
-        "team": "KC",
-        "last_name": "Fox",
-        "first_name": "Jack"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/kendallfuller/2555349/careerstats",
+        "first_name": "Kendall",
+        "gamelogs_url": "http://my.test.com/player/kendallfuller/2555349/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/kendallfuller/2555349/gamesplits",
+        "last_name": "Fuller",
         "profile_id": 2555349,
         "profile_name": "kendallfuller",
         "profile_url": "http://my.test.com/player/kendallfuller/2555349/profile",
-        "team": "KC",
-        "last_name": "Fuller",
-        "first_name": "Kendall"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/zackgolditch/2561529/careerstats",
+        "first_name": "Zack",
+        "gamelogs_url": "http://my.test.com/player/zackgolditch/2561529/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/zackgolditch/2561529/gamesplits",
+        "last_name": "Golditch",
         "profile_id": 2561529,
         "profile_name": "zackgolditch",
         "profile_url": "http://my.test.com/player/zackgolditch/2561529/profile",
-        "team": "KC",
-        "last_name": "Golditch",
-        "first_name": "Zack"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/davongrayson/2560997/careerstats",
+        "first_name": "Davon",
+        "gamelogs_url": "http://my.test.com/player/davongrayson/2560997/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/davongrayson/2560997/gamesplits",
+        "last_name": "Grayson",
         "profile_id": 2560997,
         "profile_name": "davongrayson",
         "profile_url": "http://my.test.com/player/davongrayson/2560997/profile",
-        "team": "KC",
-        "last_name": "Grayson",
-        "first_name": "Davon"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/justinhamilton/2553531/careerstats",
+        "first_name": "Justin",
+        "gamelogs_url": "http://my.test.com/player/justinhamilton/2553531/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/justinhamilton/2553531/gamesplits",
+        "last_name": "Hamilton",
         "profile_id": 2553531,
         "profile_name": "justinhamilton",
         "profile_url": "http://my.test.com/player/justinhamilton/2553531/profile",
-        "team": "KC",
-        "last_name": "Hamilton",
-        "first_name": "Justin"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/mecolehardman/2562580/careerstats",
+        "first_name": "Mecole",
+        "gamelogs_url": "http://my.test.com/player/mecolehardman/2562580/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/mecolehardman/2562580/gamesplits",
+        "last_name": "Hardman",
         "profile_id": 2562580,
         "profile_name": "mecolehardman",
         "profile_url": "http://my.test.com/player/mecolehardman/2562580/profile",
-        "team": "KC",
-        "last_name": "Hardman",
-        "first_name": "Mecole"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/dariusharris/2563108/careerstats",
+        "first_name": "Darius",
+        "gamelogs_url": "http://my.test.com/player/dariusharris/2563108/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/dariusharris/2563108/gamesplits",
+        "last_name": "Harris",
         "profile_id": 2563108,
         "profile_name": "dariusharris",
         "profile_url": "http://my.test.com/player/dariusharris/2563108/profile",
-        "team": "KC",
-        "last_name": "Harris",
-        "first_name": "Darius"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/chadhenne/252/careerstats",
+        "first_name": "Chad",
+        "gamelogs_url": "http://my.test.com/player/chadhenne/252/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/chadhenne/252/gamesplits",
+        "last_name": "Henne",
         "profile_id": 252,
         "profile_name": "chadhenne",
         "profile_url": "http://my.test.com/player/chadhenne/252/profile",
-        "team": "KC",
-        "last_name": "Henne",
-        "first_name": "Chad"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/tyreekhill/2556214/careerstats",
+        "first_name": "Tyreek",
+        "gamelogs_url": "http://my.test.com/player/tyreekhill/2556214/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/tyreekhill/2556214/gamesplits",
+        "last_name": "Hill",
         "profile_id": 2556214,
         "profile_name": "tyreekhill",
         "profile_url": "http://my.test.com/player/tyreekhill/2556214/profile",
-        "team": "KC",
-        "last_name": "Hill",
-        "first_name": "Tyreek"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/d'juanhines/2561342/careerstats",
+        "first_name": "D'Juan",
+        "gamelogs_url": "http://my.test.com/player/d'juanhines/2561342/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/d'juanhines/2561342/gamesplits",
+        "last_name": "Hines",
         "profile_id": 2561342,
         "profile_name": "d'juanhines",
         "profile_url": "http://my.test.com/player/d'juanhines/2561342/profile",
-        "team": "KC",
-        "last_name": "Hines",
-        "first_name": "D'Juan"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/anthonyhitchens/2543592/careerstats",
+        "first_name": "Anthony",
+        "gamelogs_url": "http://my.test.com/player/anthonyhitchens/2543592/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/anthonyhitchens/2543592/gamesplits",
+        "last_name": "Hitchens",
         "profile_id": 2543592,
         "profile_name": "anthonyhitchens",
         "profile_url": "http://my.test.com/player/anthonyhitchens/2543592/profile",
-        "team": "KC",
-        "last_name": "Hitchens",
-        "first_name": "Anthony"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/ryanhunter/2561348/careerstats",
+        "first_name": "Ryan",
+        "gamelogs_url": "http://my.test.com/player/ryanhunter/2561348/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/ryanhunter/2561348/gamesplits",
+        "last_name": "Hunter",
         "profile_id": 2561348,
         "profile_name": "ryanhunter",
         "profile_url": "http://my.test.com/player/ryanhunter/2561348/profile",
-        "team": "KC",
-        "last_name": "Hunter",
-        "first_name": "Ryan"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/carloshyde/2543743/careerstats",
+        "first_name": "Carlos",
+        "gamelogs_url": "http://my.test.com/player/carloshyde/2543743/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/carloshyde/2543743/gamesplits",
+        "last_name": "Hyde",
         "profile_id": 2543743,
         "profile_name": "carloshyde",
         "profile_url": "http://my.test.com/player/carloshyde/2543743/profile",
-        "team": "KC",
-        "last_name": "Hyde",
-        "first_name": "Carlos"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/joeyivie/2558080/careerstats",
+        "first_name": "Joey",
+        "gamelogs_url": "http://my.test.com/player/joeyivie/2558080/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/joeyivie/2558080/gamesplits",
+        "last_name": "Ivie",
         "profile_id": 2558080,
         "profile_name": "joeyivie",
         "profile_url": "http://my.test.com/player/joeyivie/2558080/profile",
-        "team": "KC",
-        "last_name": "Ivie",
-        "first_name": "Joey"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/chrisjones/2556369/careerstats",
+        "first_name": "Chris",
+        "gamelogs_url": "http://my.test.com/player/chrisjones/2556369/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/chrisjones/2556369/gamesplits",
+        "last_name": "Jones",
         "profile_id": 2556369,
         "profile_name": "chrisjones",
         "profile_url": "http://my.test.com/player/chrisjones/2556369/profile",
-        "team": "KC",
-        "last_name": "Jones",
-        "first_name": "Chris"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/haroldjones-quartey/2553897/careerstats",
+        "first_name": "Harold",
+        "gamelogs_url": "http://my.test.com/player/haroldjones-quartey/2553897/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/haroldjones-quartey/2553897/gamesplits",
+        "last_name": "Jones-Quartey",
         "profile_id": 2553897,
         "profile_name": "haroldjones-quartey",
         "profile_url": "http://my.test.com/player/haroldjones-quartey/2553897/profile",
-        "team": "KC",
-        "last_name": "Jones-Quartey",
-        "first_name": "Harold"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/nickkeizer/2561115/careerstats",
+        "first_name": "Nick",
+        "gamelogs_url": "http://my.test.com/player/nickkeizer/2561115/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/nickkeizer/2561115/gamesplits",
+        "last_name": "Keizer",
         "profile_id": 2561115,
         "profile_name": "nickkeizer",
         "profile_url": "http://my.test.com/player/nickkeizer/2561115/profile",
-        "team": "KC",
-        "last_name": "Keizer",
-        "first_name": "Nick"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/traviskelce/2540258/careerstats",
+        "first_name": "Travis",
+        "gamelogs_url": "http://my.test.com/player/traviskelce/2540258/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/traviskelce/2540258/gamesplits",
+        "last_name": "Kelce",
         "profile_id": 2540258,
         "profile_name": "traviskelce",
         "profile_url": "http://my.test.com/player/traviskelce/2540258/profile",
-        "team": "KC",
-        "last_name": "Kelce",
-        "first_name": "Travis"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/marcuskemp/2559076/careerstats",
+        "first_name": "Marcus",
+        "gamelogs_url": "http://my.test.com/player/marcuskemp/2559076/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/marcuskemp/2559076/gamesplits",
+        "last_name": "Kemp",
         "profile_id": 2559076,
         "profile_name": "marcuskemp",
         "profile_url": "http://my.test.com/player/marcuskemp/2559076/profile",
-        "team": "KC",
-        "last_name": "Kemp",
-        "first_name": "Marcus"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/tanohkpassagnon/2558185/careerstats",
+        "first_name": "Tanoh",
+        "gamelogs_url": "http://my.test.com/player/tanohkpassagnon/2558185/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/tanohkpassagnon/2558185/gamesplits",
+        "last_name": "Kpassagnon",
         "profile_id": 2558185,
         "profile_name": "tanohkpassagnon",
         "profile_url": "http://my.test.com/player/tanohkpassagnon/2558185/profile",
-        "team": "KC",
-        "last_name": "Kpassagnon",
-        "first_name": "Tanoh"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/darronlee/2555322/careerstats",
+        "first_name": "Darron",
+        "gamelogs_url": "http://my.test.com/player/darronlee/2555322/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/darronlee/2555322/gamesplits",
+        "last_name": "Lee",
         "profile_id": 2555322,
         "profile_name": "darronlee",
         "profile_url": "http://my.test.com/player/darronlee/2555322/profile",
-        "team": "KC",
-        "last_name": "Lee",
-        "first_name": "Darron"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/chaselitton/2560792/careerstats",
+        "first_name": "Chase",
+        "gamelogs_url": "http://my.test.com/player/chaselitton/2560792/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/chaselitton/2560792/gamesplits",
+        "last_name": "Litton",
         "profile_id": 2560792,
         "profile_name": "chaselitton",
         "profile_url": "http://my.test.com/player/chaselitton/2560792/profile",
-        "team": "KC",
-        "last_name": "Litton",
-        "first_name": "Chase"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/johnlovett/2563112/careerstats",
+        "first_name": "John",
+        "gamelogs_url": "http://my.test.com/player/johnlovett/2563112/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/johnlovett/2563112/gamesplits",
+        "last_name": "Lovett",
         "profile_id": 2563112,
         "profile_name": "johnlovett",
         "profile_url": "http://my.test.com/player/johnlovett/2563112/profile",
-        "team": "KC",
-        "last_name": "Lovett",
-        "first_name": "John"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/jordanlucas/2555542/careerstats",
+        "first_name": "Jordan",
+        "gamelogs_url": "http://my.test.com/player/jordanlucas/2555542/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/jordanlucas/2555542/gamesplits",
+        "last_name": "Lucas",
         "profile_id": 2555542,
         "profile_name": "jordanlucas",
         "profile_url": "http://my.test.com/player/jordanlucas/2555542/profile",
-        "team": "KC",
-        "last_name": "Lucas",
-        "first_name": "Jordan"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/patrickmahomes/2558125/careerstats",
+        "first_name": "Patrick",
+        "gamelogs_url": "http://my.test.com/player/patrickmahomes/2558125/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/patrickmahomes/2558125/gamesplits",
+        "last_name": "Mahomes",
         "profile_id": 2558125,
         "profile_name": "patrickmahomes",
         "profile_url": "http://my.test.com/player/patrickmahomes/2558125/profile",
-        "team": "KC",
-        "last_name": "Mahomes",
-        "first_name": "Patrick"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/marcusmarshall/2563152/careerstats",
+        "first_name": "Marcus",
+        "gamelogs_url": "http://my.test.com/player/marcusmarshall/2563152/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/marcusmarshall/2563152/gamesplits",
+        "last_name": "Marshall",
         "profile_id": 2563152,
         "profile_name": "marcusmarshall",
         "profile_url": "http://my.test.com/player/marcusmarshall/2563152/profile",
-        "team": "KC",
-        "last_name": "Marshall",
-        "first_name": "Marcus"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/tyrannmathieu/2540180/careerstats",
+        "first_name": "Tyrann",
+        "gamelogs_url": "http://my.test.com/player/tyrannmathieu/2540180/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/tyrannmathieu/2540180/gamesplits",
+        "last_name": "Mathieu",
         "profile_id": 2540180,
         "profile_name": "tyrannmathieu",
         "profile_url": "http://my.test.com/player/tyrannmathieu/2540180/profile",
-        "team": "KC",
-        "last_name": "Mathieu",
-        "first_name": "Tyrann"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/robertmccray/2561492/careerstats",
+        "first_name": "Robert",
+        "gamelogs_url": "http://my.test.com/player/robertmccray/2561492/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/robertmccray/2561492/gamesplits",
+        "last_name": "McCray",
         "profile_id": 2561492,
         "profile_name": "robertmccray",
         "profile_url": "http://my.test.com/player/robertmccray/2561492/profile",
-        "team": "KC",
-        "last_name": "McCray",
-        "first_name": "Robert"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/kahlilmckenzie/2560807/careerstats",
+        "first_name": "Kahlil",
+        "gamelogs_url": "http://my.test.com/player/kahlilmckenzie/2560807/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/kahlilmckenzie/2560807/gamesplits",
+        "last_name": "McKenzie",
         "profile_id": 2560807,
         "profile_name": "kahlilmckenzie",
         "profile_url": "http://my.test.com/player/kahlilmckenzie/2560807/profile",
-        "team": "KC",
-        "last_name": "McKenzie",
-        "first_name": "Kahlil"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/herbmiller/2563153/careerstats",
+        "first_name": "Herb",
+        "gamelogs_url": "http://my.test.com/player/herbmiller/2563153/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/herbmiller/2563153/gamesplits",
+        "last_name": "Miller",
         "profile_id": 2563153,
         "profile_name": "herbmiller",
         "profile_url": "http://my.test.com/player/herbmiller/2563153/profile",
-        "team": "KC",
-        "last_name": "Miller",
-        "first_name": "Herb"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/dakarimonroe/2563113/careerstats",
+        "first_name": "Dakari",
+        "gamelogs_url": "http://my.test.com/player/dakarimonroe/2563113/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/dakarimonroe/2563113/gamesplits",
+        "last_name": "Monroe",
         "profile_id": 2563113,
         "profile_name": "dakarimonroe",
         "profile_url": "http://my.test.com/player/dakarimonroe/2563113/profile",
-        "team": "KC",
-        "last_name": "Monroe",
-        "first_name": "Dakari"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/pacemurphy/2556627/careerstats",
+        "first_name": "Pace",
+        "gamelogs_url": "http://my.test.com/player/pacemurphy/2556627/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/pacemurphy/2556627/gamesplits",
+        "last_name": "Murphy",
         "profile_id": 2556627,
         "profile_name": "pacemurphy",
         "profile_url": "http://my.test.com/player/pacemurphy/2556627/profile",
-        "team": "KC",
-        "last_name": "Murphy",
-        "first_name": "Pace"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/jamesmurray/2561487/careerstats",
+        "first_name": "James",
+        "gamelogs_url": "http://my.test.com/player/jamesmurray/2561487/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/jamesmurray/2561487/gamesplits",
+        "last_name": "Murray",
         "profile_id": 2561487,
         "profile_name": "jamesmurray",
         "profile_url": "http://my.test.com/player/jamesmurray/2561487/profile",
-        "team": "KC",
-        "last_name": "Murray",
-        "first_name": "James"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/benniemann/2561383/careerstats",
+        "first_name": "Ben",
+        "gamelogs_url": "http://my.test.com/player/benniemann/2561383/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/benniemann/2561383/gamesplits",
+        "last_name": "Niemann",
         "profile_id": 2561383,
         "profile_name": "benniemann",
         "profile_url": "http://my.test.com/player/benniemann/2561383/profile",
-        "team": "KC",
-        "last_name": "Niemann",
-        "first_name": "Ben"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/derricknnadi/2560823/careerstats",
+        "first_name": "Derrick",
+        "gamelogs_url": "http://my.test.com/player/derricknnadi/2560823/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/derricknnadi/2560823/gamesplits",
+        "last_name": "Nnadi",
         "profile_id": 2560823,
         "profile_name": "derricknnadi",
         "profile_url": "http://my.test.com/player/derricknnadi/2560823/profile",
-        "team": "KC",
-        "last_name": "Nnadi",
-        "first_name": "Derrick"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/doriano'daniel/2560827/careerstats",
+        "first_name": "Dorian",
+        "gamelogs_url": "http://my.test.com/player/doriano'daniel/2560827/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/doriano'daniel/2560827/gamesplits",
+        "last_name": "O'Daniel",
         "profile_id": 2560827,
         "profile_name": "doriano'daniel",
         "profile_url": "http://my.test.com/player/doriano'daniel/2560827/profile",
-        "team": "KC",
-        "last_name": "O'Daniel",
-        "first_name": "Dorian"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/emmanuelogbah/2555278/careerstats",
+        "first_name": "Emmanuel",
+        "gamelogs_url": "http://my.test.com/player/emmanuelogbah/2555278/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/emmanuelogbah/2555278/gamesplits",
+        "last_name": "Ogbah",
         "profile_id": 2555278,
         "profile_name": "emmanuelogbah",
         "profile_url": "http://my.test.com/player/emmanuelogbah/2555278/profile",
-        "team": "KC",
-        "last_name": "Ogbah",
-        "first_name": "Emmanuel"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/alexokafor/2539319/careerstats",
+        "first_name": "Alex",
+        "gamelogs_url": "http://my.test.com/player/alexokafor/2539319/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/alexokafor/2539319/gamesplits",
+        "last_name": "Okafor",
         "profile_id": 2539319,
         "profile_name": "alexokafor",
         "profile_url": "http://my.test.com/player/alexokafor/2539319/profile",
-        "team": "KC",
-        "last_name": "Okafor",
-        "first_name": "Alex"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/chidiokeke/2562321/careerstats",
+        "first_name": "Chidi",
+        "gamelogs_url": "http://my.test.com/player/chidiokeke/2562321/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/chidiokeke/2562321/gamesplits",
+        "last_name": "Okeke",
         "profile_id": 2562321,
         "profile_name": "chidiokeke",
         "profile_url": "http://my.test.com/player/chidiokeke/2562321/profile",
-        "team": "KC",
-        "last_name": "Okeke",
-        "first_name": "Chidi"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/byronpringle/2560844/careerstats",
+        "first_name": "Byron",
+        "gamelogs_url": "http://my.test.com/player/byronpringle/2560844/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/byronpringle/2560844/gamesplits",
+        "last_name": "Pringle",
         "profile_id": 2560844,
         "profile_name": "byronpringle",
         "profile_url": "http://my.test.com/player/byronpringle/2560844/profile",
-        "team": "KC",
-        "last_name": "Pringle",
-        "first_name": "Byron"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/reggieragland/2555169/careerstats",
+        "first_name": "Reggie",
+        "gamelogs_url": "http://my.test.com/player/reggieragland/2555169/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/reggieragland/2555169/gamesplits",
+        "last_name": "Ragland",
         "profile_id": 2555169,
         "profile_name": "reggieragland",
         "profile_url": "http://my.test.com/player/reggieragland/2555169/profile",
-        "team": "KC",
-        "last_name": "Ragland",
-        "first_name": "Reggie"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/keithreaser/2543582/careerstats",
+        "first_name": "Keith",
+        "gamelogs_url": "http://my.test.com/player/keithreaser/2543582/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/keithreaser/2543582/gamesplits",
+        "last_name": "Reaser",
         "profile_id": 2543582,
         "profile_name": "keithreaser",
         "profile_url": "http://my.test.com/player/keithreaser/2543582/profile",
-        "team": "KC",
-        "last_name": "Reaser",
-        "first_name": "Keith"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/austinreiter/2553452/careerstats",
+        "first_name": "Austin",
+        "gamelogs_url": "http://my.test.com/player/austinreiter/2553452/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/austinreiter/2553452/gamesplits",
+        "last_name": "Reiter",
         "profile_id": 2553452,
         "profile_name": "austinreiter",
         "profile_url": "http://my.test.com/player/austinreiter/2553452/profile",
-        "team": "KC",
-        "last_name": "Reiter",
-        "first_name": "Austin"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/demarcusrobinson/2555478/careerstats",
+        "first_name": "Demarcus",
+        "gamelogs_url": "http://my.test.com/player/demarcusrobinson/2555478/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/demarcusrobinson/2555478/gamesplits",
+        "last_name": "Robinson",
         "profile_id": 2555478,
         "profile_name": "demarcusrobinson",
         "profile_url": "http://my.test.com/player/demarcusrobinson/2555478/profile",
-        "team": "KC",
-        "last_name": "Robinson",
-        "first_name": "Demarcus"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/khalensaunders/2562723/careerstats",
+        "first_name": "Khalen",
+        "gamelogs_url": "http://my.test.com/player/khalensaunders/2562723/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/khalensaunders/2562723/gamesplits",
+        "last_name": "Saunders",
         "profile_id": 2562723,
         "profile_name": "khalensaunders",
         "profile_url": "http://my.test.com/player/khalensaunders/2562723/profile",
-        "team": "KC",
-        "last_name": "Saunders",
-        "first_name": "Khalen"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/mitchellschwartz/2532945/careerstats",
+        "first_name": "Mitchell",
+        "gamelogs_url": "http://my.test.com/player/mitchellschwartz/2532945/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/mitchellschwartz/2532945/gamesplits",
+        "last_name": "Schwartz",
         "profile_id": 2532945,
         "profile_name": "mitchellschwartz",
         "profile_url": "http://my.test.com/player/mitchellschwartz/2532945/profile",
-        "team": "KC",
-        "last_name": "Schwartz",
-        "first_name": "Mitchell"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/anthonysherman/2495340/careerstats",
+        "first_name": "Anthony",
+        "gamelogs_url": "http://my.test.com/player/anthonysherman/2495340/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/anthonysherman/2495340/gamesplits",
+        "last_name": "Sherman",
         "profile_id": 2495340,
         "profile_name": "anthonysherman",
         "profile_url": "http://my.test.com/player/anthonysherman/2495340/profile",
-        "team": "KC",
-        "last_name": "Sherman",
-        "first_name": "Anthony"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/kyleshurmur/2562731/careerstats",
+        "first_name": "Kyle",
+        "gamelogs_url": "http://my.test.com/player/kyleshurmur/2562731/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/kyleshurmur/2562731/gamesplits",
+        "last_name": "Shurmur",
         "profile_id": 2562731,
         "profile_name": "kyleshurmur",
         "profile_url": "http://my.test.com/player/kyleshurmur/2562731/profile",
-        "team": "KC",
-        "last_name": "Shurmur",
-        "first_name": "Kyle"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/tremonsmith/2561103/careerstats",
+        "first_name": "Tremon",
+        "gamelogs_url": "http://my.test.com/player/tremonsmith/2561103/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/tremonsmith/2561103/gamesplits",
+        "last_name": "Smith",
         "profile_id": 2561103,
         "profile_name": "tremonsmith",
         "profile_url": "http://my.test.com/player/tremonsmith/2561103/profile",
-        "team": "KC",
-        "last_name": "Smith",
-        "first_name": "Tremon"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/danielsorensen/2550257/careerstats",
+        "first_name": "Daniel",
+        "gamelogs_url": "http://my.test.com/player/danielsorensen/2550257/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/danielsorensen/2550257/gamesplits",
+        "last_name": "Sorensen",
         "profile_id": 2550257,
         "profile_name": "danielsorensen",
         "profile_url": "http://my.test.com/player/danielsorensen/2550257/profile",
-        "team": "KC",
-        "last_name": "Sorensen",
-        "first_name": "Daniel"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/andrewsoroh/2563154/careerstats",
+        "first_name": "Andrew",
+        "gamelogs_url": "http://my.test.com/player/andrewsoroh/2563154/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/andrewsoroh/2563154/gamesplits",
+        "last_name": "Soroh",
         "profile_id": 2563154,
         "profile_name": "andrewsoroh",
         "profile_url": "http://my.test.com/player/andrewsoroh/2563154/profile",
-        "team": "KC",
-        "last_name": "Soroh",
-        "first_name": "Andrew"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/breelandspeaks/2560881/careerstats",
+        "first_name": "Breeland",
+        "gamelogs_url": "http://my.test.com/player/breelandspeaks/2560881/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/breelandspeaks/2560881/gamesplits",
+        "last_name": "Speaks",
         "profile_id": 2560881,
         "profile_name": "breelandspeaks",
         "profile_url": "http://my.test.com/player/breelandspeaks/2560881/profile",
-        "team": "KC",
-        "last_name": "Speaks",
-        "first_name": "Breeland"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/nealsterling/2553451/careerstats",
+        "first_name": "Neal",
+        "gamelogs_url": "http://my.test.com/player/nealsterling/2553451/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/nealsterling/2553451/gamesplits",
+        "last_name": "Sterling",
         "profile_id": 2553451,
         "profile_name": "nealsterling",
         "profile_url": "http://my.test.com/player/nealsterling/2553451/profile",
-        "team": "KC",
-        "last_name": "Sterling",
-        "first_name": "Neal"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/darwinthompson/2562832/careerstats",
+        "first_name": "Darwin",
+        "gamelogs_url": "http://my.test.com/player/darwinthompson/2562832/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/darwinthompson/2562832/gamesplits",
+        "last_name": "Thompson",
         "profile_id": 2562832,
         "profile_name": "darwinthompson",
         "profile_url": "http://my.test.com/player/darwinthompson/2562832/profile",
-        "team": "KC",
-        "last_name": "Thompson",
-        "first_name": "Darwin"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/codythompson/2562759/careerstats",
+        "first_name": "Cody",
+        "gamelogs_url": "http://my.test.com/player/codythompson/2562759/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/codythompson/2562759/gamesplits",
+        "last_name": "Thompson",
         "profile_id": 2562759,
         "profile_name": "codythompson",
         "profile_url": "http://my.test.com/player/codythompson/2562759/profile",
-        "team": "KC",
-        "last_name": "Thompson",
-        "first_name": "Cody"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/juanthornhill/2562761/careerstats",
+        "first_name": "Juan",
+        "gamelogs_url": "http://my.test.com/player/juanthornhill/2562761/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/juanthornhill/2562761/gamesplits",
+        "last_name": "Thornhill",
         "profile_id": 2562761,
         "profile_name": "juanthornhill",
         "profile_url": "http://my.test.com/player/juanthornhill/2562761/profile",
-        "team": "KC",
-        "last_name": "Thornhill",
-        "first_name": "Juan"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/d'montrewade/2560911/careerstats",
+        "first_name": "D'Montre",
+        "gamelogs_url": "http://my.test.com/player/d'montrewade/2560911/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/d'montrewade/2560911/gamesplits",
+        "last_name": "Wade",
         "profile_id": 2560911,
         "profile_name": "d'montrewade",
         "profile_url": "http://my.test.com/player/d'montrewade/2560911/profile",
-        "team": "KC",
-        "last_name": "Wade",
-        "first_name": "D'Montre"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/cavonwalker/2561285/careerstats",
+        "first_name": "Cavon",
+        "gamelogs_url": "http://my.test.com/player/cavonwalker/2561285/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/cavonwalker/2561285/gamesplits",
+        "last_name": "Walker",
         "profile_id": 2561285,
         "profile_name": "cavonwalker",
         "profile_url": "http://my.test.com/player/cavonwalker/2561285/profile",
-        "team": "KC",
-        "last_name": "Walker",
-        "first_name": "Cavon"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/charvariusward/2561417/careerstats",
+        "first_name": "Charvarius",
+        "gamelogs_url": "http://my.test.com/player/charvariusward/2561417/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/charvariusward/2561417/gamesplits",
+        "last_name": "Ward",
         "profile_id": 2561417,
         "profile_name": "charvariusward",
         "profile_url": "http://my.test.com/player/charvariusward/2561417/profile",
-        "team": "KC",
-        "last_name": "Ward",
-        "first_name": "Charvarius"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/sammywatkins/2543457/careerstats",
+        "first_name": "Sammy",
+        "gamelogs_url": "http://my.test.com/player/sammywatkins/2543457/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/sammywatkins/2543457/gamesplits",
+        "last_name": "Watkins",
         "profile_id": 2543457,
         "profile_name": "sammywatkins",
         "profile_url": "http://my.test.com/player/sammywatkins/2543457/profile",
-        "team": "KC",
-        "last_name": "Watkins",
-        "first_name": "Sammy"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/armaniwatts/2560921/careerstats",
+        "first_name": "Armani",
+        "gamelogs_url": "http://my.test.com/player/armaniwatts/2560921/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/armaniwatts/2560921/gamesplits",
+        "last_name": "Watts",
         "profile_id": 2560921,
         "profile_name": "armaniwatts",
         "profile_url": "http://my.test.com/player/armaniwatts/2560921/profile",
-        "team": "KC",
-        "last_name": "Watts",
-        "first_name": "Armani"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/davidwells/2560925/careerstats",
+        "first_name": "David",
+        "gamelogs_url": "http://my.test.com/player/davidwells/2560925/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/davidwells/2560925/gamesplits",
+        "last_name": "Wells",
         "profile_id": 2560925,
         "profile_name": "davidwells",
         "profile_url": "http://my.test.com/player/davidwells/2560925/profile",
-        "team": "KC",
-        "last_name": "Wells",
-        "first_name": "David"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/xavierwilliams/2553764/careerstats",
+        "first_name": "Xavier",
+        "gamelogs_url": "http://my.test.com/player/xavierwilliams/2553764/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/xavierwilliams/2553764/gamesplits",
+        "last_name": "Williams",
         "profile_id": 2553764,
         "profile_name": "xavierwilliams",
         "profile_url": "http://my.test.com/player/xavierwilliams/2553764/profile",
-        "team": "KC",
-        "last_name": "Williams",
-        "first_name": "Xavier"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/damienwilliams/2550512/careerstats",
+        "first_name": "Damien",
+        "gamelogs_url": "http://my.test.com/player/damienwilliams/2550512/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/damienwilliams/2550512/gamesplits",
+        "last_name": "Williams",
         "profile_id": 2550512,
         "profile_name": "damienwilliams",
         "profile_url": "http://my.test.com/player/damienwilliams/2550512/profile",
-        "team": "KC",
-        "last_name": "Williams",
-        "first_name": "Damien"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/darrelwilliams/2560935/careerstats",
+        "first_name": "Darrel",
+        "gamelogs_url": "http://my.test.com/player/darrelwilliams/2560935/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/darrelwilliams/2560935/gamesplits",
+        "last_name": "Williams",
         "profile_id": 2560935,
         "profile_name": "darrelwilliams",
         "profile_url": "http://my.test.com/player/darrelwilliams/2560935/profile",
-        "team": "KC",
-        "last_name": "Williams",
-        "first_name": "Darrel"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/damienwilson/2552686/careerstats",
+        "first_name": "Damien",
+        "gamelogs_url": "http://my.test.com/player/damienwilson/2552686/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/damienwilson/2552686/gamesplits",
+        "last_name": "Wilson",
         "profile_id": 2552686,
         "profile_name": "damienwilson",
         "profile_url": "http://my.test.com/player/damienwilson/2552686/profile",
-        "team": "KC",
-        "last_name": "Wilson",
-        "first_name": "Damien"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/jameswinchester/2542357/careerstats",
+        "first_name": "James",
+        "gamelogs_url": "http://my.test.com/player/jameswinchester/2542357/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/jameswinchester/2542357/gamesplits",
+        "last_name": "Winchester",
         "profile_id": 2542357,
         "profile_name": "jameswinchester",
         "profile_url": "http://my.test.com/player/jameswinchester/2542357/profile",
-        "team": "KC",
-        "last_name": "Winchester",
-        "first_name": "James"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/andrewwylie/2559354/careerstats",
+        "first_name": "Andrew",
+        "gamelogs_url": "http://my.test.com/player/andrewwylie/2559354/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/andrewwylie/2559354/gamesplits",
+        "last_name": "Wylie",
         "profile_id": 2559354,
         "profile_name": "andrewwylie",
         "profile_url": "http://my.test.com/player/andrewwylie/2559354/profile",
-        "team": "KC",
-        "last_name": "Wylie",
-        "first_name": "Andrew"
+        "team": "KC"
     },
     {
+        "careerstats_url": "http://my.test.com/player/deonyelder/2561293/careerstats",
+        "first_name": "Deon",
+        "gamelogs_url": "http://my.test.com/player/deonyelder/2561293/gamelogs",
+        "gamesplits_url": "http://my.test.com/player/deonyelder/2561293/gamesplits",
+        "last_name": "Yelder",
         "profile_id": 2561293,
         "profile_name": "deonyelder",
         "profile_url": "http://my.test.com/player/deonyelder/2561293/profile",
-        "team": "KC",
-        "last_name": "Yelder",
-        "first_name": "Deon"
+        "team": "KC"
     }
 ]

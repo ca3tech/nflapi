@@ -1,8 +1,9 @@
 import re
+import xml.sax
 import pandas
 from nflapi.AbstractContentHandler import AbstractContentHandler
 
-class RosterContentHandler(AbstractContentHandler):
+class RosterContentHandler(AbstractContentHandler, xml.sax.ContentHandler):
     """Parse player profile data from NFL team roster page
     
     Consumes tags like:
@@ -55,9 +56,16 @@ class RosterContentHandler(AbstractContentHandler):
         m = re.search(r"player/([^/]+)/(\d+)/profile", attrs["href"])
         d = {}
         if m is not None:
+            purl = "{}{}".format(self._domain, attrs["href"])
+            csurl = purl.replace("profile", "careerstats")
+            gsurl = purl.replace("profile", "gamesplits")
+            glurl = purl.replace("profile", "gamelogs")
             d = {"profile_id": int(m.group(2)),
                  "profile_name": m.group(1),
-                 "profile_url": "{}{}".format(self._domain, attrs["href"])}
+                 "profile_url": purl,
+                 "careerstats_url": csurl,
+                 "gamelogs_url": glurl,
+                 "gamesplits_url": gsurl}
             if self._team is not None:
                 d["team"] = self._team
         return d
