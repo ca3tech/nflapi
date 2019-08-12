@@ -4,7 +4,7 @@ import time
 import re
 from nflapi.AbstractContentHandler import AbstractContentHandler
 
-class ScheduleContentHandler(AbstractContentHandler):
+class ScheduleContentHandler(AbstractContentHandler, xml.sax.ContentHandler):
     """SAX content handler for parsing a schedule XML file"""
 
     def __init__(self):

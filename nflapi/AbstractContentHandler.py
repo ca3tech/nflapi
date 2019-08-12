@@ -1,7 +1,6 @@
-import xml.sax
 import pandas
 
-class AbstractContentHandler(xml.sax.ContentHandler):
+class AbstractContentHandler(object):
     """Base ContentHandler for NFL API calls"""
 
     @property

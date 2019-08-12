@@ -88,6 +88,17 @@
         "team": "KC"
     },
     {
+        "careerstats_url": "http://www.nfl.com/player/morrisclaiborne/2533059/careerstats",
+        "first_name": "Morris",
+        "gamelogs_url": "http://www.nfl.com/player/morrisclaiborne/2533059/gamelogs",
+        "gamesplits_url": "http://www.nfl.com/player/morrisclaiborne/2533059/gamesplits",
+        "last_name": "Claiborne",
+        "profile_id": 2533059,
+        "profile_name": "morrisclaiborne",
+        "profile_url": "http://www.nfl.com/player/morrisclaiborne/2533059/profile",
+        "team": "KC"
+    },
+    {
         "careerstats_url": "http://www.nfl.com/player/frankclark/2552629/careerstats",
         "first_name": "Frank",
         "gamelogs_url": "http://www.nfl.com/player/frankclark/2552629/gamelogs",
@@ -162,6 +173,17 @@
         "profile_id": 2559066,
         "profile_name": "gehrigdieter",
         "profile_url": "http://www.nfl.com/player/gehrigdieter/2559066/profile",
+        "team": "KC"
+    },
+    {
+        "careerstats_url": "http://www.nfl.com/player/hunterdimick/2559167/careerstats",
+        "first_name": "Hunter",
+        "gamelogs_url": "http://www.nfl.com/player/hunterdimick/2559167/gamelogs",
+        "gamesplits_url": "http://www.nfl.com/player/hunterdimick/2559167/gamesplits",
+        "last_name": "Dimick",
+        "profile_id": 2559167,
+        "profile_name": "hunterdimick",
+        "profile_url": "http://www.nfl.com/player/hunterdimick/2559167/profile",
         "team": "KC"
     },
     {
@@ -360,6 +382,17 @@
         "profile_id": 2561348,
         "profile_name": "ryanhunter",
         "profile_url": "http://www.nfl.com/player/ryanhunter/2561348/profile",
+        "team": "KC"
+    },
+    {
+        "careerstats_url": "http://www.nfl.com/player/michaelhunter/2556562/careerstats",
+        "first_name": "Michael",
+        "gamelogs_url": "http://www.nfl.com/player/michaelhunter/2556562/gamelogs",
+        "gamesplits_url": "http://www.nfl.com/player/michaelhunter/2556562/gamesplits",
+        "last_name": "Hunter",
+        "profile_id": 2556562,
+        "profile_name": "michaelhunter",
+        "profile_url": "http://www.nfl.com/player/michaelhunter/2556562/profile",
         "team": "KC"
     },
     {
@@ -888,17 +921,6 @@
         "profile_id": 2560921,
         "profile_name": "armaniwatts",
         "profile_url": "http://www.nfl.com/player/armaniwatts/2560921/profile",
-        "team": "KC"
-    },
-    {
-        "careerstats_url": "http://www.nfl.com/player/davidwells/2560925/careerstats",
-        "first_name": "David",
-        "gamelogs_url": "http://www.nfl.com/player/davidwells/2560925/gamelogs",
-        "gamesplits_url": "http://www.nfl.com/player/davidwells/2560925/gamesplits",
-        "last_name": "Wells",
-        "profile_id": 2560925,
-        "profile_name": "davidwells",
-        "profile_url": "http://www.nfl.com/player/davidwells/2560925/profile",
         "team": "KC"
     },
     {

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup, Tag
 import pandas
 from nflapi.CachedAPI import CachedAPI, CachedRowFilter, ListOrDataFrame
 from nflapi.RosterContentHandler import RosterContentHandler
-import nflapi.CV
+from nflapi.Team import Team
 
 class RosterRowFilter(CachedRowFilter):
     """Internal class used by the Roster class
@@ -53,7 +53,7 @@ class Roster(CachedAPI):
         list or pandas.DataFrame
             Which type is returned is determined by the `return_type` parameter
         """
-        assert team in nflapi.CV.TEAM.keys(), f"team {team} is not valid"
+        assert Team.is_team(team), f"team {team} is not valid"
         query = {"team": team}
         rf = RosterRowFilter(team)
         return self._fetch(query, rf, return_type)
