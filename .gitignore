@@ -21,6 +21,10 @@ __pycache__/*
 .idea
 tags
 
+# Visual Studio stuff
+.pyproject*
+/.vs*
+
 # Package files
 *.egg
 *.eggs/
