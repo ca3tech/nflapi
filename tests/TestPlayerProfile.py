@@ -12,7 +12,7 @@ class TestPlayerProfile(unittest.TestCase):
 
     def test_getProfile_list(self):
         roster = self.getRoster("patrickmahomes")
-        pp = MockPlayerProfile(roster, "tests/data/profile_patrick_mahomes.html")
+        pp = MockPlayerProfile("tests/data/profile_patrick_mahomes.html")
         exp = [{
             "first_name": "Patrick",
             "last_name": "Mahomes",
@@ -26,11 +26,11 @@ class TestPlayerProfile(unittest.TestCase):
             "experience": "3rd season",
             "high_school": "Whitehouse HS [TX]"
         }]
-        self.assertEqual(pp.getProfile(list), exp)
+        self.assertEqual(pp.getProfile(roster, list), exp)
 
     def test_getProfile_dataframe(self):
         roster = self.getRoster("patrickmahomes")
-        pp = MockPlayerProfile(roster, "tests/data/profile_patrick_mahomes.html")
+        pp = MockPlayerProfile("tests/data/profile_patrick_mahomes.html")
         exp = pandas.DataFrame([{
             "first_name": "Patrick",
             "last_name": "Mahomes",
@@ -44,12 +44,12 @@ class TestPlayerProfile(unittest.TestCase):
             "experience": "3rd season",
             "high_school": "Whitehouse HS [TX]"
         }])
-        self.assertTrue(all(pp.getProfile(pandas.DataFrame).eq(exp)))
+        self.assertTrue(all(pp.getProfile(roster, pandas.DataFrame).eq(exp)))
 
     def test_getProfile_2nd_call_list(self):
         roster = self.getRoster("patrickmahomes")
-        pp = MockPlayerProfile(roster, "tests/data/profile_patrick_mahomes.html")
-        pp.getProfile(list)
+        pp = MockPlayerProfile("tests/data/profile_patrick_mahomes.html")
+        pp.getProfile(roster, list)
         self.assertEqual(pp.queryAPI_count, 1, "query count not expected after 1st call")
         roster = self.getRoster("tyreekhill")
         pp.htmlpath = "tests/data/profile_tyreek_hill.html"
@@ -66,17 +66,17 @@ class TestPlayerProfile(unittest.TestCase):
             "experience": "4th season",
             "high_school": "Coffee Co. HS [Douglas, GA]"
         }]
-        self.assertEqual(pp.getProfile(list, roster), exp)
+        self.assertEqual(pp.getProfile(roster, list), exp)
         self.assertEqual(pp.queryAPI_count, 2, "query count not expected after 2nd call")
 
     def test_getProfile_uses_cache(self):
         roster = self.getRoster("patrickmahomes")
-        pp = MockPlayerProfile(roster, "tests/data/profile_patrick_mahomes.html")
-        pp.getProfile(list)
+        pp = MockPlayerProfile("tests/data/profile_patrick_mahomes.html")
+        pp.getProfile(roster, list)
         self.assertEqual(pp.queryAPI_count, 1, "query count not expected after 1st call")
         roster = self.getRoster("tyreekhill")
         pp.htmlpath = "tests/data/profile_tyreek_hill.html"
-        pp.getProfile(list, roster)
+        pp.getProfile(roster, list)
         self.assertEqual(pp.queryAPI_count, 2, "query count not expected after 2nd call")
         roster = self.getRoster("patrickmahomes")
         pp.htmlpath = "tests/data/profile_patrick_mahomes.html"
@@ -93,12 +93,12 @@ class TestPlayerProfile(unittest.TestCase):
             "experience": "3rd season",
             "high_school": "Whitehouse HS [TX]"
         }]
-        self.assertEqual(pp.getProfile(list, roster), exp)
+        self.assertEqual(pp.getProfile(roster, list), exp)
         self.assertEqual(pp.queryAPI_count, 2, "query count not expected after 3rd call")
 
 class MockPlayerProfile(PlayerProfile):
-    def __init__(self, roster_data : dict, htmlpath : str):
-        super(MockPlayerProfile, self).__init__(roster_data)
+    def __init__(self, htmlpath : str):
+        super(MockPlayerProfile, self).__init__()
         self.htmlpath = htmlpath
         self._qapi_count = 0
 

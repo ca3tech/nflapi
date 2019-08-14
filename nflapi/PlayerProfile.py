@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import json
 from nflapi.CachedAPI import CachedAPI, CachedRowFilter, ListOrDataFrame
 from nflapi.PlayerProfileContentHandler import PlayerProfileContentHandler
 
@@ -18,16 +19,12 @@ class PlayerProfileRowFilter(CachedRowFilter):
 
 class PlayerProfile(CachedAPI):
 
-    def __init__(self, roster_data : dict = None):
+    def __init__(self):
         """Constructor for the PlayerProfile class"""
         super(PlayerProfile, self).__init__(None, PlayerProfileContentHandler())
-        if roster_data is not None:
-            self._roster_data = roster_data
     
-    def getProfile(self, return_type : ListOrDataFrame, roster_data : dict = None) -> ListOrDataFrame:
-        if roster_data is not None:
-            self._roster_data = roster_data
-        assert self._roster_data is not None, "roster_data is not set"
+    def getProfile(self, roster_data : dict, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        self._roster_data = roster_data
         return self._fetch(None, PlayerProfileRowFilter(self._roster_data), return_type)
 
     @property
