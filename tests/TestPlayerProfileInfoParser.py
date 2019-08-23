@@ -20,7 +20,7 @@ class TestPlayerProfileInfoParser(unittest.TestCase):
 			<p><strong>High School</strong>: Whitehouse HS [TX]</p>
         </div>
         '''
-        exp = {
+        exp = [{
             "height": "6-3",
             "weight": 230,
             "age": 23,
@@ -28,7 +28,7 @@ class TestPlayerProfileInfoParser(unittest.TestCase):
             "college": "Texas Tech",
             "experience": "3rd season",
             "high_school": "Whitehouse HS [TX]"
-        }
+        }]
         bs = BeautifulSoup(tag, "html.parser")
         self.assertEqual(self.parser.parse(bs.div), exp)
 

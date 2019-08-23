@@ -18,7 +18,7 @@ class PlayerProfileContentHandler(AbstractContentHandler):
         self._data = []
         for btag in soup.find_all(pbfilter.match):
             for itag in btag.find_all(pifilter.match):
-                self._data.append(parser.parse(itag))
+                self._data.extend(parser.parse(itag))
 
     @property
     def list(self) -> list:

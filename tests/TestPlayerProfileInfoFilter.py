@@ -19,7 +19,7 @@ class TestPlayerProfileInfoFilter(unittest.TestCase):
         self.assertFalse(self.filter.match(bs.div))
 
     def test_filter_false_for_nondiv_tag(self):
-        bs = BeautifulSoup('<a href="http://my.awesume.website">here</a>', "html.parser")
+        bs = BeautifulSoup('<a href="http://my.awesome.website">here</a>', "html.parser")
         self.assertFalse(self.filter.match(bs.a))
 
 if __name__ == "__main__":

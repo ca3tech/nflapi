@@ -1,9 +1,11 @@
 from bs4 import Tag
 import re
+from typing import List
+from nflapi.BSTagParser import BSTagParser
 
-class PlayerProfileInfoParser(object):
+class PlayerProfileInfoParser(BSTagParser):
     
-    def parse(self, tag : Tag) -> dict:
+    def parse(self, tag : Tag) -> List[dict]:
         d = {}
         for ptag in tag.find_all("p"):
             for stag in ptag.find_all("strong"):
@@ -17,4 +19,4 @@ class PlayerProfileInfoParser(object):
                 if key in ("age", "weight"):
                     value = int(value)
                 d[key] = value
-        return d
+        return [d]
