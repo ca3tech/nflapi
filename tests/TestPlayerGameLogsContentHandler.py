@@ -37,6 +37,13 @@ class TestPlayerGameLogsContentHandler(unittest.TestCase):
         exp = self.getExpectedList("tests/data/gamelogs_tyreek_hill_2018_parse.json")
         self.assertEqual(self.handler.list, exp)
 
+    def test_parse_kick_list(self):
+        with open("tests/data/gamelogs_harrison_butker_2018.html", "rt") as fp:
+            doc = "".join(fp.readlines())
+        self.handler.parse(doc)
+        exp = self.getExpectedList("tests/data/gamelogs_harrison_butker_2018_parse.json")
+        self.assertEqual(self.handler.list, exp)
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -54,6 +54,8 @@ class PlayerGameLogsParser(BSTagParser):
         for i in range(0, len(tds)):
             txt = self._getTagText(tds[i])
             if self._hdrs[i] != "":
+                if self._hdrs[i] == "kickoffs" and txt == "avg":
+                    self._hdrs[i] = self._hdrs[i-1]
                 txt = f"_{txt}"
             self._hdrs[i] = self._hdrs[i] + txt
 
@@ -97,6 +99,10 @@ class PlayerGameLogsParser(BSTagParser):
             "passing_rate": self._float_parser,
             "rushing_avg": self._float_parser,
             "receiving_avg": self._float_parser,
+            "overall_fgs_pct": self._float_parser,
+            "pat_pct": self._float_parser,
+            "kickoffs_ko_avg": self._float_parser,
+            "kickoffs_ret_avg": self._float_parser,
             "default": self._int_parser
         }
         if header in switch.keys():

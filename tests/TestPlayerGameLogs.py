@@ -73,7 +73,6 @@ class TestPlayerGameLogs(unittest.TestCase):
         got = pgl.getGameLogs(pmroster, 2018, list)
         exp = self.getExpectedList()
         self.assertEqual(pgl._qapi_count, 2, "query count not expected")
-#        self.assertEqual(got, exp, "data not expected")
         self.assertDictListEqual(got, exp)
 
 class MockPlayerGameLogs(PlayerGameLogs):
