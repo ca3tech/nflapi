@@ -17,10 +17,12 @@ class PlayerGameLogsParser(BSTagParser):
         data = []
         for trtag in tbtag.find_all("tr"):
             if self._incBodyRow(trtag):
-                d = dict(zip(self._headers, self._parseBodyRow(trtag)))
-                d["season"] = self._season
-                d["season_type"] = self._seasonType
-                data.append(d)
+                rl = self._parseBodyRow(trtag)
+                if rl is not None:
+                    d = dict(zip(self._headers, rl))
+                    d["season"] = self._season
+                    d["season_type"] = self._seasonType
+                    data.append(d)
         return data
 
     @property
@@ -66,10 +68,12 @@ class PlayerGameLogsParser(BSTagParser):
 
     def _parseBodyRow(self, trtag : Tag) -> list:
         tdtags = trtag.find_all("td")
-        data = []
-        for i in range(0, len(tdtags)):
-            pfun = self._getBodyColParser(self._headers[i])
-            data.append(pfun(tdtags[i]))
+        data = None
+        if self._getTagText(tdtags[1]) != "bye":
+            data = []
+            for i in range(0, len(tdtags)):
+                pfun = self._getBodyColParser(self._headers[i])
+                data.append(pfun(tdtags[i]))
         return data
 
     def _getTagText(self, tag : Tag, underscores : bool = True, tolower : bool = True) -> str:
@@ -92,6 +96,7 @@ class PlayerGameLogsParser(BSTagParser):
             "passing_avg": self._float_parser,
             "passing_rate": self._float_parser,
             "rushing_avg": self._float_parser,
+            "receiving_avg": self._float_parser,
             "default": self._int_parser
         }
         if header in switch.keys():
@@ -117,7 +122,7 @@ class PlayerGameLogsParser(BSTagParser):
     def _int_parser(self, tdtag : Tag) -> int:
         v = self._str_parser(tdtag)
         if v is not None:
-            v = int(v)
+            v = int(re.sub(r"T$", "", v))
         return v
 
     def _float_parser(self, tdtag : Tag) -> float:

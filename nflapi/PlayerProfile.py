@@ -11,10 +11,10 @@ class PlayerProfileRowFilter(CachedRowFilter):
     def __init__(self, roster_data : dict):
         self._roster_data = roster_data
 
-    def test(self, row : tuple) -> bool:
+    def test(self, row : dict) -> bool:
         x = False
-        if "profile_id" in row._fields:
-            x = row.profile_id == self._roster_data["profile_id"]
+        if "profile_id" in row.keys():
+            x = row["profile_id"] == self._roster_data["profile_id"]
         return x
 
 class PlayerProfile(CachedAPI):

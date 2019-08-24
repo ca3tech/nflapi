@@ -14,10 +14,10 @@ class RosterRowFilter(CachedRowFilter):
     def __init__(self, team : str):
         self._team = team
 
-    def test(self, row : tuple) -> bool:
+    def test(self, row : dict) -> bool:
         x = False
-        if "team" in row._fields:
-            x = row.team == self._team
+        if "team" in row.keys():
+            x = row["team"] == self._team
         return x
 
 class Roster(CachedAPI):

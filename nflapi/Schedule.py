@@ -15,10 +15,10 @@ class ScheduleRowFilter(CachedRowFilter):
         self._season_type = season_type
         self._week = week
 
-    def test(self, row : tuple) -> bool:
+    def test(self, row : dict) -> bool:
         x = False
-        if all([_ in row._fields for _ in ["season", "season_type", "week"]]):
-            x = row.season == self._season and row.season_type == self._season_type and row.week == self._week
+        if all([_ in row.keys() for _ in ["season", "season_type", "week"]]):
+            x = row["season"] == self._season and row["season_type"] == self._season_type and row["week"] == self._week
         return x
 
 class Schedule(CachedAPI):

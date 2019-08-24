@@ -1,14 +1,14 @@
 import os
 from urllib3 import PoolManager
 import pandas
-from typing import TypeVar
+from typing import TypeVar, List
 from nflapi.API import API
 from nflapi.AbstractContentHandler import AbstractContentHandler
 
 ListOrDataFrame = TypeVar("ListOrDataFrame", list, pandas.DataFrame)
 
 class CachedRowFilter(object):
-    def test(self, row : tuple) -> bool:
+    def test(self, row : dict) -> bool:
         raise NotImplementedError("abstract base class CachedRowFilter method test has not been implemented")
 
 class CachedAPI(API):
@@ -18,7 +18,7 @@ class CachedAPI(API):
 
     def __init__(self, srcurl : str, handler : AbstractContentHandler):
         super(CachedAPI, self).__init__(srcurl, handler)
-        self._cache = None
+        self._cache : List[dict] = None
 
     def _fetch(self, query : dict, row_filter : CachedRowFilter, return_type : ListOrDataFrame) -> ListOrDataFrame:
         """The main method of this class
@@ -48,11 +48,11 @@ class CachedAPI(API):
             data = self._fromCache(row_filter, return_type)
         else:
             self._parseDocument(self._queryAPI(query))
+            self._toCache(self._handler.list)
             if issubclass(return_type, pandas.DataFrame):
                 data = self._handler.dataframe
             else:
                 data = self._handler.list
-            self._toCache(data)
         return data
 
     def _isInCache(self, row_filter : CachedRowFilter) -> bool:
@@ -62,19 +62,17 @@ class CachedAPI(API):
         return cached
 
     def _getCacheRowVec(self, row_filter : CachedRowFilter) -> list:
-        return [row_filter.test(row) for row in self._cache.itertuples(index=False)]
+        return [row_filter.test(row) for row in self._cache]
 
-    def _toCache(self, data : ListOrDataFrame):
-        if issubclass(type(data), list):
-            data = pandas.DataFrame(data)
+    def _toCache(self, data : List[dict]):
         if self._cache is None:
             self._cache = data
         else:
-            self._cache = self._cache.append(data, ignore_index=True)
+            self._cache.extend(data)
 
     def _fromCache(self, row_filter : CachedRowFilter, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
         x = self._getCacheRowVec(row_filter)
-        data = self._cache[x]
-        if issubclass(return_type, list):
-            data = data.to_dict(orient="records")
+        data = [self._cache[i] for i in range(0, len(self._cache)) if x[i]]
+        if issubclass(return_type, pandas.DataFrame):
+            data = pandas.DataFrame(data)
         return data
