@@ -103,6 +103,8 @@ class PlayerGameLogsParser(BSTagParser):
             "pat_pct": self._float_parser,
             "kickoffs_ko_avg": self._float_parser,
             "kickoffs_ret_avg": self._float_parser,
+            "tackles_sck": self._float_parser,
+            "interceptions_avg": self._float_parser,
             "default": self._int_parser
         }
         if header in switch.keys():
