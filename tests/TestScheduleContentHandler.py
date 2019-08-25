@@ -15,7 +15,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.handler.startElement("gms", {"gd": "0", "w": "16", "y": "2018", "t": "R"})
         self.assertEqual(self.handler.season, 2018)
         self.assertEqual(self.handler.week, 16)
-        self.assertEqual(self.handler.season_type, "REG")
+        self.assertEqual(self.handler.season_type, "regular_season")
         self.assertEqual(len(self.handler.list), 0, "game data is not empty")
         self.assertEqual(len(self.handler.dataframe), 0, "game dataframe is not empty")
 
@@ -35,7 +35,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.handler.startElement("g", gd)
         self.assertEqual(self.handler.season, 2018)
         self.assertEqual(self.handler.week, 16)
-        self.assertEqual(self.handler.season_type, "REG")
+        self.assertEqual(self.handler.season_type, "regular_season")
         d = self.handler.list
         self.assertIsNotNone(d)
         self.assertEqual(len(d), 1, "list does not have 1 record")
@@ -53,7 +53,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.assertEqual(d[0]["finished"], True, "finished not expected")
         self.assertEqual(d[0]["season"], self.handler.season, "season not expected")
         self.assertEqual(d[0]["week"], self.handler.week, "week not expected")
-        self.assertEqual(d[0]["season_type"], gd["gt"], "season_type not expected")
+        self.assertEqual(d[0]["season_type"], "regular_season", "season_type not expected")
         self.assertEqual(d[0]["date"], time.strptime("2018-12-22 16:30 -0500", "%Y-%m-%d %H:%M %z"), "date not expected")
 
     def test_startElement_g_reg_am_list(self):
@@ -64,7 +64,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.handler.startElement("g", gd)
         self.assertEqual(self.handler.season, 2018)
         self.assertEqual(self.handler.week, 16)
-        self.assertEqual(self.handler.season_type, "REG")
+        self.assertEqual(self.handler.season_type, "regular_season")
         d = self.handler.list
         self.assertIsNotNone(d)
         self.assertEqual(len(d), 1, "list does not have 1 record")
@@ -82,7 +82,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.assertEqual(d[0]["finished"], True, "finished not expected")
         self.assertEqual(d[0]["season"], self.handler.season, "season not expected")
         self.assertEqual(d[0]["week"], self.handler.week, "week not expected")
-        self.assertEqual(d[0]["season_type"], gd["gt"], "season_type not expected")
+        self.assertEqual(d[0]["season_type"], "regular_season", "season_type not expected")
         self.assertEqual(d[0]["date"], time.strptime("2018-12-22 09:00 -0500", "%Y-%m-%d %H:%M %z"), "date not expected")
 
     def test_startElement_g_reg_future_list(self):
@@ -93,7 +93,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.handler.startElement("g", gd)
         self.assertEqual(self.handler.season, 2018)
         self.assertEqual(self.handler.week, 16)
-        self.assertEqual(self.handler.season_type, "REG")
+        self.assertEqual(self.handler.season_type, "regular_season")
         d = self.handler.list
         self.assertIsNotNone(d)
         self.assertEqual(len(d), 1, "list does not have 1 record")
@@ -111,7 +111,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.assertEqual(d[0]["finished"], False, "finished not expected")
         self.assertEqual(d[0]["season"], self.handler.season, "season not expected")
         self.assertEqual(d[0]["week"], self.handler.week, "week not expected")
-        self.assertEqual(d[0]["season_type"], gd["gt"], "season_type not expected")
+        self.assertEqual(d[0]["season_type"], "regular_season", "season_type not expected")
         self.assertEqual(d[0]["date"], time.strptime("2018-12-22 16:30 -0500", "%Y-%m-%d %H:%M %z"), "date not expected")
 
     def test_startElement_g_reg(self):
@@ -122,7 +122,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.handler.startElement("g", gd)
         self.assertEqual(self.handler.season, 2018)
         self.assertEqual(self.handler.week, 16)
-        self.assertEqual(self.handler.season_type, "REG")
+        self.assertEqual(self.handler.season_type, "regular_season")
         df = self.handler.dataframe
         self.assertIsNotNone(df)
         self.assertEqual(len(df), 1, "dataframe does not have 1 row")
@@ -140,7 +140,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.assertEqual(df.finished.to_list(), [True], "finished not expected")
         self.assertEqual(df.season.to_list(), [self.handler.season], "season not expected")
         self.assertEqual(df.week.to_list(), [self.handler.week], "week not expected")
-        self.assertEqual(df.season_type.to_list(), [gd["gt"]], "season_type not expected")
+        self.assertEqual(df.season_type.to_list(), ["regular_season"], "season_type not expected")
         self.assertEqual(df.date.to_list(), [time.strptime("2018-12-22 16:30 -0500", "%Y-%m-%d %H:%M %z")], "date not expected")
 
     def test_startElement_g_reg_am(self):
@@ -151,7 +151,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.handler.startElement("g", gd)
         self.assertEqual(self.handler.season, 2018)
         self.assertEqual(self.handler.week, 16)
-        self.assertEqual(self.handler.season_type, "REG")
+        self.assertEqual(self.handler.season_type, "regular_season")
         df = self.handler.dataframe
         self.assertIsNotNone(df)
         self.assertEqual(len(df), 1, "dataframe does not have 1 row")
@@ -169,7 +169,7 @@ class TestScheduleContentHandler(unittest.TestCase):
         self.assertEqual(df.finished.to_list(), [True], "finished not expected")
         self.assertEqual(df.season.to_list(), [self.handler.season], "season not expected")
         self.assertEqual(df.week.to_list(), [self.handler.week], "week not expected")
-        self.assertEqual(df.season_type.to_list(), [gd["gt"]], "season_type not expected")
+        self.assertEqual(df.season_type.to_list(), ["regular_season"], "season_type not expected")
         self.assertEqual(df.date.to_list(), [time.strptime("2018-12-22 09:00 -0500", "%Y-%m-%d %H:%M %z")], "date not expected")
 
     def test_parse_reg_xml(self):
@@ -177,7 +177,7 @@ class TestScheduleContentHandler(unittest.TestCase):
             xml.sax.parse(xfh, self.handler)
             self.assertEqual(self.handler.season, 2018)
             self.assertEqual(self.handler.week, 16)
-            self.assertEqual(self.handler.season_type, "REG")
+            self.assertEqual(self.handler.season_type, "regular_season")
             d = self.handler.list
             self.assertIsNotNone(d)
             self.assertEqual(len(d), 16, "dataframe does not have 1 row")
@@ -195,7 +195,7 @@ class TestScheduleContentHandler(unittest.TestCase):
             self.assertEqual(d[0]["finished"], True, "finished not expected")
             self.assertEqual(d[0]["season"], self.handler.season, "season not expected")
             self.assertEqual(d[0]["week"], self.handler.week, "week not expected")
-            self.assertEqual(d[0]["season_type"], "REG", "season_type not expected")
+            self.assertEqual(d[0]["season_type"], "regular_season", "season_type not expected")
             self.assertEqual(d[0]["date"], time.strptime("2018-12-22 16:30 -0500", "%Y-%m-%d %H:%M %z"), "date not expected")
 
             self.assertEqual(d[15]["gsis_id"], "2018122400", "gsis_id not expected")
@@ -212,7 +212,7 @@ class TestScheduleContentHandler(unittest.TestCase):
             self.assertEqual(d[15]["finished"], True, "finished not expected")
             self.assertEqual(d[15]["season"], self.handler.season, "season not expected")
             self.assertEqual(d[15]["week"], self.handler.week, "week not expected")
-            self.assertEqual(d[15]["season_type"], "REG", "season_type not expected")
+            self.assertEqual(d[15]["season_type"], "regular_season", "season_type not expected")
             self.assertEqual(d[15]["date"], time.strptime("2018-12-24 20:15 -0500", "%Y-%m-%d %H:%M %z"), "date not expected")
 
 if __name__ == "__main__":

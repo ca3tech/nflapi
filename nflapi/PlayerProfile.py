@@ -24,6 +24,25 @@ class PlayerProfile(CachedAPI):
         super(PlayerProfile, self).__init__(None, PlayerProfileContentHandler())
     
     def getProfile(self, roster_data : dict, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Get the player profile
+        
+        This will use the profile_url of the provided roster record
+        to retrieve the player profile.
+
+        Parameters
+        ----------
+        roster_data : dict
+            A record from the team roster data
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
         self._roster_data = roster_data
         return self._fetch(None, PlayerProfileRowFilter(self._roster_data), return_type)
 
@@ -38,6 +57,8 @@ class PlayerProfile(CachedAPI):
         self._url = roster_data["profile_url"]
 
     def _parseDocument(self, docstr : str):
+        # Parse the document with the handler
         self._handler.parse(docstr)
+        # Add some of the data from the provided roster record to the profile data
         pd = dict((k, self._roster_data[k]) for k in ["first_name", "last_name", "profile_id", "team"])
         self._handler.mergeData(pd)

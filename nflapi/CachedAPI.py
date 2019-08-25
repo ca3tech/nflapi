@@ -47,7 +47,13 @@ class CachedAPI(API):
         if self._isInCache(row_filter):
             data = self._fromCache(row_filter, return_type)
         else:
+            # Query the API to retrieve the resulting content
+            # as a string. Pass the content to the subclassed
+            # _parseDocument method.
             self._parseDocument(self._queryAPI(query))
+            # We expect the subclass to utilize the handler to
+            # process the document, and therefore that we can
+            # retrieve the results from the handler properties.
             self._toCache(self._handler.list)
             if issubclass(return_type, pandas.DataFrame):
                 data = self._handler.dataframe
@@ -56,12 +62,18 @@ class CachedAPI(API):
         return data
 
     def _isInCache(self, row_filter : CachedRowFilter) -> bool:
+        # Use the provided row filter to determine if there
+        # are rows in the cache meeting the query criteria
         cached = False
         if self._cache is not None:
             cached = any(self._getCacheRowVec(row_filter))
         return cached
 
     def _getCacheRowVec(self, row_filter : CachedRowFilter) -> list:
+        # For each record in the cache use the provided row
+        # filter to determine if the record is to be returned.
+        # The returned value is a list of booleans of the
+        # same length as the cache
         return [row_filter.test(row) for row in self._cache]
 
     def _toCache(self, data : List[dict]):
@@ -72,6 +84,7 @@ class CachedAPI(API):
 
     def _fromCache(self, row_filter : CachedRowFilter, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
         x = self._getCacheRowVec(row_filter)
+        # Extract each row from the cache where the x value is True
         data = [self._cache[i] for i in range(0, len(self._cache)) if x[i]]
         if issubclass(return_type, pandas.DataFrame):
             data = pandas.DataFrame(data)

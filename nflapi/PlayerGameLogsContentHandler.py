@@ -11,10 +11,18 @@ class PlayerGameLogsContentHandler(AbstractContentHandler):
         self._data = []
     
     def parse(self, docstr : str):
+        """Parse the gamelogs page for the player game data
+        
+        Parameters
+        ----------
+        docstr : str
+            The html document as a string
+        """
         soup = BeautifulSoup(docstr, "html.parser")
         filter = PlayerGameLogsFilter()
         self._data = []
         for tag in soup.find_all(filter.match):
+            # Parse data from the current table tag
             parser = PlayerGameLogsParser(self._season)
             self._data.extend(parser.parse(tag))
 
@@ -35,5 +43,13 @@ class PlayerGameLogsContentHandler(AbstractContentHandler):
         return pandas.DataFrame(self.list)
 
     def mergeData(self, src : dict):
+        """Add content from a dict to each data record
+        
+        Parameters
+        ----------
+        src : dict
+            A dict containing data to be added to each
+            of the data records
+        """
         for d in self.list:
             d.update(src)

@@ -60,11 +60,18 @@ class Roster(CachedAPI):
 
     def _parseDocument(self, docstr : str):
         soup = BeautifulSoup(docstr, "html.parser")
+        # Our handler is an xml.sax.ContentHandler.
+        # Therefore we first need to tell it that we
+        # are starting to process a document.
+        # Next we need to pass each putative content
+        # tag to it for data extraction.
         self._handler.startDocument()
         for tag in soup.find_all(["meta", "a"]):
             self._parseTag(tag)
 
     def _parseTag(self, tag : Tag):
+        # Adapt the BeautifulSoup tag to the xml.sax.ContentHandler
+        # tag processing convention for data extraction.
         self._handler.startElement(tag.name, tag.attrs)
         if tag.name == "a":
             self._handler.characters(str(tag.string))

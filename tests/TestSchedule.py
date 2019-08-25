@@ -22,13 +22,13 @@ class TestSchedule(TestCase):
 
     def test_getSchedule_one_week_list(self):
         obj = MockSchedule("tests/data/schedule_2018_reg_16.xml")
-        schd = obj.getSchedule(2018, "REG", 16)
+        schd = obj.getSchedule(2018, "regular_season", 16)
         xschd = self.getExpectedResults("tests/data/schedule_2018_reg_16.json")
         self.assertEqual(schd, xschd)
 
     def test_getSchedule_one_week_dataframe(self):
         obj = MockSchedule("tests/data/schedule_2018_reg_16.xml")
-        schdf = obj.getSchedule(2018, "REG", 16, pandas.DataFrame)
+        schdf = obj.getSchedule(2018, "regular_season", 16, pandas.DataFrame)
         xschdf = self.getExpectedResults("tests/data/schedule_2018_reg_16.json", pandas.DataFrame)
         self.assertEqual(len(schdf), len(xschdf), "row count differs")
         self.assertTrue(all(schdf.eq(xschdf, axis="columns")), "data does not match")
@@ -36,51 +36,51 @@ class TestSchedule(TestCase):
     @skip("unset to run test that actually hits the nfl api")
     def test_getSchedule_one_week_list_live(self):
         obj = Schedule()
-        schd = obj.getSchedule(2018, "REG", 16)
+        schd = obj.getSchedule(2018, "regular_season", 16)
         xschd = self.getExpectedResults("tests/data/schedule_2018_reg_16.json")
         self.assertEqual(schd, xschd)
 
     def test_getSchedule_two_week_2calls_list(self):
         obj = MockSchedule("tests/data/schedule_2018_reg_15.xml")
-        schd = obj.getSchedule(2018, "REG", 15)
+        schd = obj.getSchedule(2018, "regular_season", 15)
         obj.xmlpath = "tests/data/schedule_2018_reg_16.xml"
-        schd = obj.getSchedule(2018, "REG", 16)
+        schd = obj.getSchedule(2018, "regular_season", 16)
         self.assertEqual(obj.queryAPI_count, 2, "queryAPI call count unexpected")
         xschd = self.getExpectedResults("tests/data/schedule_2018_reg_16.json")
         self.assertEqual(schd, xschd)
 
     def test_getSchedule_one_week_2calls_cached_list(self):
         obj = MockSchedule("tests/data/schedule_2018_reg_16.xml")
-        schd = obj.getSchedule(2018, "REG", 16)
-        schd = obj.getSchedule(2018, "REG", 16)
+        schd = obj.getSchedule(2018, "regular_season", 16)
+        schd = obj.getSchedule(2018, "regular_season", 16)
         self.assertEqual(obj.queryAPI_count, 1, "queryAPI call count unexpected")
         xschd = self.getExpectedResults("tests/data/schedule_2018_reg_16.json")
         self.assertEqual(schd, xschd)
 
     def test_getSchedule_one_week_2calls_cached_dataframe(self):
         obj = MockSchedule("tests/data/schedule_2018_reg_16.xml")
-        schdf = obj.getSchedule(2018, "REG", 16, pandas.DataFrame)
-        schdf = obj.getSchedule(2018, "REG", 16, pandas.DataFrame)
+        schdf = obj.getSchedule(2018, "regular_season", 16, pandas.DataFrame)
+        schdf = obj.getSchedule(2018, "regular_season", 16, pandas.DataFrame)
         self.assertEqual(obj.queryAPI_count, 1, "queryAPI call count unexpected")
         xschdf = self.getExpectedResults("tests/data/schedule_2018_reg_16.json", pandas.DataFrame)
         self.assertTrue(all(schdf.eq(xschdf, axis="columns")), "data does not match")
 
     def test_getSchedule_two_week_2calls_cached_list(self):
         obj = MockSchedule("tests/data/schedule_2018_reg_16.xml")
-        schd = obj.getSchedule(2018, "REG", 16)
+        schd = obj.getSchedule(2018, "regular_season", 16)
         obj.xmlpath = "tests/data/schedule_2018_reg_15.xml"
-        schd = obj.getSchedule(2018, "REG", 15)
-        schd = obj.getSchedule(2018, "REG", 16)
+        schd = obj.getSchedule(2018, "regular_season", 15)
+        schd = obj.getSchedule(2018, "regular_season", 16)
         self.assertEqual(obj.queryAPI_count, 2, "queryAPI call count unexpected")
         xschd = self.getExpectedResults("tests/data/schedule_2018_reg_16.json")
         self.assertEqual(schd, xschd)
 
     def test_getSchedule_two_week_2calls_cached_dataframe(self):
         obj = MockSchedule("tests/data/schedule_2018_reg_16.xml")
-        schdf = obj.getSchedule(2018, "REG", 16, pandas.DataFrame)
+        schdf = obj.getSchedule(2018, "regular_season", 16, pandas.DataFrame)
         obj.xmlpath = "tests/data/schedule_2018_reg_15.xml"
-        schdf = obj.getSchedule(2018, "REG", 15, pandas.DataFrame)
-        schdf = obj.getSchedule(2018, "REG", 16, pandas.DataFrame)
+        schdf = obj.getSchedule(2018, "regular_season", 15, pandas.DataFrame)
+        schdf = obj.getSchedule(2018, "regular_season", 16, pandas.DataFrame)
         self.assertEqual(obj.queryAPI_count, 2, "queryAPI call count unexpected")
         xschdf = self.getExpectedResults("tests/data/schedule_2018_reg_16.json", pandas.DataFrame)
         self.assertTrue(all(schdf.eq(xschdf, axis="columns")), "data does not match")

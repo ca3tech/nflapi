@@ -43,7 +43,7 @@ class ScheduleContentHandler(AbstractContentHandler, xml.sax.ContentHandler):
             self._season = int(attrs["y"])
             self._week = int(attrs["w"])
             if attrs["t"] == "R":
-                self._season_type = "REG"
+                self._season_type = "regular_season"
         elif name == "g":
             # This is a tag giving the game information
             # <g eid="2018122200" gsis="57794" d="Sat" t="4:30" q="F" k="" h="TEN" hnn="titans" hs="25" v="WAS" vnn="redskins" vs="16" p="" rz="" ga="" gt="REG"/>
@@ -84,6 +84,9 @@ class ScheduleContentHandler(AbstractContentHandler, xml.sax.ContentHandler):
                     else:
                         # Convert the string to an integer
                         val = int(val)
+                elif key == "gt":
+                    st = {"PRE": "preseason", "REG": "regular_season", "POST": "postseason"}
+                    val = st[val]
                 d[self._gmkeymap[key]] = val
         # Add the season that we parsed from the gms
         d["season"] = self.season
