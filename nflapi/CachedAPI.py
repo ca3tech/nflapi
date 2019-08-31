@@ -54,12 +54,17 @@ class CachedAPI(API):
             # We expect the subclass to utilize the handler to
             # process the document, and therefore that we can
             # retrieve the results from the handler properties.
-            self._toCache(self._handler.list)
+            data = self._getResultList()
+            self._toCache(data)
             if issubclass(return_type, pandas.DataFrame):
-                data = self._handler.dataframe
-            else:
-                data = self._handler.list
+                data = self._getResultDataFrame()
         return data
+
+    def _getResultDataFrame(self) -> pandas.DataFrame:
+        return self._handler.dataframe
+
+    def _getResultList(self) -> List[dict]:
+        return self._handler.list
 
     def _isInCache(self, row_filter : CachedRowFilter) -> bool:
         # Use the provided row filter to determine if there
