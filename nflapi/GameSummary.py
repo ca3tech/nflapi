@@ -2,13 +2,14 @@ import pandas
 from nflapi.CachedAPI import ListOrDataFrame
 from nflapi.GameDataParser import GameDataParser
 
-class GameScore(GameDataParser):
+class GameSummary(GameDataParser):
 
-    def getGameScore(self, schedule_game : dict, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
-        """Get game score for a given game
+    def getGameSummary(self, schedule_game : dict, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Get game summary for a given game
         
         This will use the gsis_id value in the input `schedule_game`
-        to retrieve game scores.
+        to retrieve the game summary. The game summary consists of
+        the overall game statistics for players and the team.
 
         Parameters
         ----------
@@ -33,13 +34,19 @@ class GameScore(GameDataParser):
             sdata : dict = basedata.copy()
             sdata.update({"team": tdata["abbr"],
                           "team_type": ttype})
-            scoredata : dict = tdata["score"]
-            for k, v in scoredata.items():
-                try:
-                    ki = int(k)
-                    key = f"q{ki}"
-                except ValueError:
-                    key = "final"
-                sdata[key] = v
-            data.append(sdata)
+            statdata : dict = tdata["stats"]
+            for grpname, grpdict in statdata.items():
+                if grpname == "team":
+                    datum = sdata.copy()
+                    for k, v in grpdict.items():
+                        datum[f"{grpname}_{k}"] = v
+                    data.append(datum)
+                else:
+                    for plid, pldict in grpdict.items():
+                        datum = sdata.copy()
+                        datum["player_id"] = plid
+                        datum["player_abrv_name"] = pldict["name"]
+                        for statname in [_ for _ in pldict.keys() if _ != "name"]:
+                            datum[f"{grpname}_{statname}"] = pldict[statname]
+                        data.append(datum)
         return data
