@@ -1,6 +1,7 @@
 import unittest
 import json
 import pandas
+from tests.MockGameData import MockGameData
 from nflapi.GameSummary import GameSummary
 
 class TestGameSummary(unittest.TestCase):
@@ -41,24 +42,8 @@ class TestGameSummary(unittest.TestCase):
         got = gd.getGameSummary(sch)
         self.assertEqual(got, exp)
     
-
-class MockGameSummary(GameSummary):
-
+class MockGameSummary(MockGameData, GameSummary):
+    
     def __init__(self, srcpath : str):
-        super(MockGameSummary, self).__init__()
-        self._qapi_count = 0
-        self.srcpath = srcpath
-
-    @property
-    def srcpath(self) -> str:
-        return self._srcpath
-
-    @srcpath.setter
-    def srcpath(self, srcpath : str):
-        self._srcpath = srcpath
-        with open(srcpath, "rt") as fp:
-            self.src = fp.read()
-
-    def _queryAPI(self, schedule : dict) -> str:
-        self._qapi_count += 1
-        return self.src
+        super(MockGameSummary, self).__init__(srcpath)
+    

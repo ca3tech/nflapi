@@ -1,5 +1,6 @@
 import unittest
 import json
+from tests.MockGameData import MockGameData
 from nflapi.GameData import GameData
 
 class TestGameData(unittest.TestCase):
@@ -67,24 +68,3 @@ class TestGameData(unittest.TestCase):
         self.assertEqual(gd._qapi_count, 2, "query count not expected")
         self.assertEqual(gd._url, gd._url_base.format(gsisid=gsis_id1), "URL not expected")
         self.assertEqual(got, exp)
-
-class MockGameData(GameData):
-
-    def __init__(self, srcpath : str):
-        super(MockGameData, self).__init__()
-        self._qapi_count = 0
-        self.srcpath = srcpath
-
-    @property
-    def srcpath(self) -> str:
-        return self._srcpath
-
-    @srcpath.setter
-    def srcpath(self, srcpath : str):
-        self._srcpath = srcpath
-        with open(srcpath, "rt") as fp:
-            self.src = fp.read()
-
-    def _queryAPI(self, schedule : dict) -> str:
-        self._qapi_count += 1
-        return self.src
