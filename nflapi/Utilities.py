@@ -1,4 +1,5 @@
 import re
+import nflgame.statmap as sm
 
 def parseYardLine(ydl : str, posteam : str) -> int:
     """Convert recorded yard line to a signed int
@@ -34,3 +35,29 @@ def parseYardLine(ydl : str, posteam : str) -> int:
         else:
             yl = 50 - int(lty[1])
     return yl
+
+def getStatMetadata(statId : int) -> dict:
+    """Get game play statistic metadata
+    
+    For a given statId value this will return a dict
+    with the ID, category, description and long description.
+
+    Parameters
+    ----------
+    statId : int
+        The statId from the NFL API
+    
+    Returns
+    -------
+    dict
+        See the description
+    """
+    d = {"stat_id": statId}
+    for k, v in sm.idmap[statId].items():
+        if not k in ["fields", "yds"]:
+            if k == "long":
+                fk = f"stat_desc_{k}"
+            else:
+                fk = f"stat_{k}"
+            d[fk] = v
+    return d
