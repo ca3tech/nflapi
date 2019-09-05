@@ -14,10 +14,19 @@ class GameDataRowFilter(CachedRowFilter):
         return self._gsisid in row.keys()
 
 class GameData(CachedAPI):
+    __cache__ : List[dict] = []
 
-    def __init__(self):
-        """Constructor for the GameData class"""
+    def __init__(self, use_shared_cache : bool = True):
+        """Constructor for the GameData class
+        
+        Parameters
+        ----------
+        use_shared_cache : bool
+            Should the shared GameData cache be used for the object [default: True]
+        """
         super(GameData, self).__init__(None, None)
+        if use_shared_cache:
+            self._cache = GameData.__cache__
         self._url_base = "http://www.nfl.com/liveupdate/game-center/{gsisid}/{gsisid}_gtd.json"
         self._data : dict = None
 

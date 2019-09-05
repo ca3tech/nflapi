@@ -20,6 +20,14 @@ class CachedAPI(API):
         super(CachedAPI, self).__init__(srcurl, handler)
         self._cache : List[dict] = None
 
+    @property
+    def _cache(self) -> List[dict]:
+        return self._cache_v
+
+    @_cache.setter
+    def _cache(self, newcache : List[dict]) -> List[dict]:
+        self._cache_v = newcache
+
     def _fetch(self, query : dict, row_filter : CachedRowFilter, return_type : ListOrDataFrame) -> ListOrDataFrame:
         """The main method of this class
 

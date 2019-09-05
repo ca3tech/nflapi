@@ -3,7 +3,7 @@ from nflapi.GameData import GameData
 class MockGameData(GameData):
 
     def __init__(self, srcpath : str):
-        super(MockGameData, self).__init__()
+        super(MockGameData, self).__init__(False)
         self._qapi_count = 0
         self.srcpath = srcpath
 
