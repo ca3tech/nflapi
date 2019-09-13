@@ -71,7 +71,7 @@ class Schedule(CachedAPI):
             wrng = range(0, 5)
         elif season_type == "postseason":
             wrng = range(1, 5)
-        assert week in wrng
+        assert week in wrng, f"week {week} is not valid for season_type {season_type}"
 
         if season_type == "postseason":
             week += 17

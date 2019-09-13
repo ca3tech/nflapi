@@ -1,4 +1,7 @@
 import re
+import calendar
+import datetime
+from typing import List
 import nflgame.statmap as sm
 
 def parseYardLine(ydl : str, posteam : str) -> int:
@@ -61,3 +64,13 @@ def getStatMetadata(statId : int) -> dict:
                 fk = f"stat_{k}"
             d[fk] = v
     return d
+
+def getFirstDate(year : int, month : int, day_of_week : int) -> datetime.date:
+    dm : List[list] = calendar.monthcalendar(year, month)
+    fdar = [i for i in range(0, len(dm[0])) if dm[0][i] > 0]
+    fd = fdar[0]
+    i = 0
+    if fd > day_of_week:
+        i += 1
+    day = dm[i][day_of_week]
+    return datetime.date(year, month, day)

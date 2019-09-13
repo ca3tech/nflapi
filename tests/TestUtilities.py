@@ -1,4 +1,5 @@
 import unittest
+import datetime
 import nflapi.Utilities as util
 
 class TestUtilities(unittest.TestCase):
@@ -29,3 +30,11 @@ class TestUtilities(unittest.TestCase):
             'stat_desc_long': 'A first down or TD occurred due to a penalty. A play can have a first down from a pass or rush and from a penalty.'
         }
         self.assertEqual(util.getStatMetadata(5), exp)
+
+    def test_getFirstDate(self):
+        dt = util.getFirstDate(2019, 9, 4)
+        self.assertEqual(dt, datetime.date(2019, 9, 6))
+        dt = util.getFirstDate(2017, 9, 4)
+        self.assertEqual(dt, datetime.date(2017, 9, 1))
+        dt = util.getFirstDate(2016, 9, 4)
+        self.assertEqual(dt, datetime.date(2016, 9, 2))

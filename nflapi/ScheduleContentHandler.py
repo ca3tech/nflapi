@@ -85,7 +85,9 @@ class ScheduleContentHandler(AbstractContentHandler, xml.sax.ContentHandler):
                         # Convert the string to an integer
                         val = int(val)
                 elif key == "gt":
-                    st = {"PRE": "preseason", "REG": "regular_season", "POST": "postseason"}
+                    st = {"PRE": "preseason", "REG": "regular_season",
+                          "WC": "postseason", "DIV": "postseason",
+                          "CON": "postseason", "SB": "postseason"}
                     val = st[val]
                 d[self._gmkeymap[key]] = val
         # Add the season that we parsed from the gms
