@@ -55,10 +55,7 @@ class CachedAPI(API):
         if self._isInCache(row_filter):
             data = self._fromCache(row_filter, return_type)
         else:
-            # Query the API to retrieve the resulting content
-            # as a string. Pass the content to the subclassed
-            # _parseDocument method.
-            self._parseDocument(self._queryAPI(query))
+            self._processQuery(query)
             # We expect the subclass to utilize the handler to
             # process the document, and therefore that we can
             # retrieve the results from the handler properties.

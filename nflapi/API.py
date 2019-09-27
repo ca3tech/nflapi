@@ -24,6 +24,14 @@ class API(object):
     def _url(self, srcurl : str):
         self._srcurl = srcurl
 
+    def _processQuery(self, query_doc : dict = None):
+        """Query nfl.com and process the results
+
+        This will send the query to the nfl.com API/website
+        and send the results to the `_parseDocument` method.
+        """
+        self._parseDocument(self._queryAPI(query_doc))
+
     def _queryAPI(self, query_doc : dict = None) -> str:
         rslt = self._http.request("GET", self._url, fields=query_doc)
         return rslt.data.decode("utf-8")
