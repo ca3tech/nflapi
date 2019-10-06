@@ -8,4 +8,4 @@ about from [nflgame](https://github.com/BurntSushi/nflgame).
 Other data is scraped from the nfl.com website.
 
 ## API
-See [docs](https://github.com/pages/ca3tech/nflapi)
+See [docs](https://ca3tech.github.io/nflapi/nflapi/)
