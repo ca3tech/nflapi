@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 rope = "*"
+pdoc3 = "*"
 
 [packages]
 nflapi = {path = ".",editable = true}

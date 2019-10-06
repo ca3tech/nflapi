@@ -16,7 +16,11 @@ from nflapi.PlayerGameLogs import PlayerGameLogs
 import nflapi.Utilities as util
 
 class Client:
-    """Provides access to nfl.com data"""
+    """Provides access to nfl.com data
+    
+    This is the only module that you use directly as it
+    provides access to all data available for the package.
+    """
 
     def __init__(self):
         self._schedule = Schedule()

@@ -3,12 +3,7 @@ from urllib3 import PoolManager
 from nflapi.AbstractContentHandler import AbstractContentHandler
 
 class API(object):
-    """Base class for classes that retrieve data from the NFL APIs
-    
-    TODO:
-    -----
-    Investigate making this threaded. Perhaps make it extend Thread.
-    """
+    """Base class for classes that retrieve data from the NFL APIs"""
     __http__ : PoolManager = PoolManager()
 
     def __init__(self, srcurl : str, handler : AbstractContentHandler):
