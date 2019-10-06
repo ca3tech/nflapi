@@ -16,6 +16,8 @@ class TestPlayerProfile(unittest.TestCase):
         exp = [{
             "first_name": "Patrick",
             "last_name": "Mahomes",
+            "number": 15,
+            "position": "QB",
             "profile_id": 2558125,
             "team": "KC",
             "height": "6-3",
@@ -34,6 +36,8 @@ class TestPlayerProfile(unittest.TestCase):
         exp = pandas.DataFrame([{
             "first_name": "Patrick",
             "last_name": "Mahomes",
+            "number": 15,
+            "position": "QB",
             "profile_id": 2558125,
             "team": "KC",
             "height": "6-3",
@@ -56,6 +60,8 @@ class TestPlayerProfile(unittest.TestCase):
         exp = [{
             "first_name": "Tyreek",
             "last_name": "Hill",
+            "number": 10,
+            "position": "WR",
             "profile_id": 2556214,
             "team": "KC",
             "height": "5-10",
@@ -83,6 +89,8 @@ class TestPlayerProfile(unittest.TestCase):
         exp = [{
             "first_name": "Patrick",
             "last_name": "Mahomes",
+            "number": 15,
+            "position": "QB",
             "profile_id": 2558125,
             "team": "KC",
             "height": "6-3",

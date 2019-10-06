@@ -10,6 +10,10 @@ class TestPlayerProfileInfoParser(unittest.TestCase):
         tag = '''
         <div id="player-info">
             <p>
+				<span class="player-name">Patrick Mahomes&nbsp;&nbsp;</span>
+				<span class="player-number">#15 QB</span>
+			</p>
+            <p>
 			    <strong>Height</strong>: 6-3 &nbsp; 
 				<strong>Weight</strong>: 230 &nbsp; 
 				<strong>Age</strong>: 23
@@ -27,7 +31,9 @@ class TestPlayerProfileInfoParser(unittest.TestCase):
             "born": "9/17/1995 Tyler, TX",
             "college": "Texas Tech",
             "experience": "3rd season",
-            "high_school": "Whitehouse HS [TX]"
+            "high_school": "Whitehouse HS [TX]",
+            "number": 15,
+            "position": "QB"
         }]
         bs = BeautifulSoup(tag, "html.parser")
         self.assertEqual(self.parser.parse(bs.div), exp)

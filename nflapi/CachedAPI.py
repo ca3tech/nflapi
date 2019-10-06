@@ -61,7 +61,7 @@ class CachedAPI(API):
             # retrieve the results from the handler properties.
             data = self._getResultList()
             self._toCache(data)
-            if issubclass(return_type, pandas.DataFrame):
+            if return_type == pandas.DataFrame:
                 data = self._getResultDataFrame()
         return data
 

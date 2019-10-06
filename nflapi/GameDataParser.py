@@ -31,7 +31,7 @@ class GameDataParser(GameData):
         gdkeys = [_ for _ in gdata[0].keys() if re.search(r"^\d+$", _)]
         gsisid = gdkeys[0]
         data = self._doParse(gdata[0][gsisid], {"gsis_id": gsisid})
-        if issubclass(return_type, pandas.DataFrame):
+        if return_type == pandas.DataFrame:
             data = pandas.DataFrame(data)
         return data
 

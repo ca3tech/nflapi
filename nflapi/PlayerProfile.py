@@ -60,5 +60,5 @@ class PlayerProfile(CachedAPI):
         # Parse the document with the handler
         self._handler.parse(docstr)
         # Add some of the data from the provided roster record to the profile data
-        pd = dict((k, self._roster_data[k]) for k in ["first_name", "last_name", "profile_id", "team"])
+        pd = dict((k, self._roster_data[k]) for k in ["first_name", "last_name", "number", "position", "profile_id", "team"])
         self._handler.mergeData(pd)

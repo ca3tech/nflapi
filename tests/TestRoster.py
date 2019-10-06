@@ -1,28 +1,22 @@
 import unittest
 import json
 import pandas
+import datetime
 from nflapi.CachedAPI import ListOrDataFrame
 from nflapi.Roster import Roster
 
 class TestRoster(unittest.TestCase):
 
-    def getExpectedResults(self, jspath : str, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
-        with open(jspath, "rt") as jfh:
-            xrostd = json.load(jfh)
-        if issubclass(return_type, pandas.DataFrame):
-            xrostd = pandas.DataFrame(xrostd)
-        return xrostd
-
     def test_getRoster_one_team_list(self):
         obj = MockRoster("tests/data/roster_kc.html")
         rostd = obj.getRoster("KC")
-        xrostd = self.getExpectedResults("tests/data/roster_kc.json")
+        xrostd = getExpectedResults("tests/data/roster_kc.json")
         self.assertEqual(rostd, xrostd)
 
     def test_getRoster_one_team_dataframe(self):
         obj = MockRoster("tests/data/roster_kc.html")
         rostdf = obj.getRoster("KC", pandas.DataFrame)
-        xrostdf = self.getExpectedResults("tests/data/roster_kc.json", pandas.DataFrame)
+        xrostdf = getExpectedResults("tests/data/roster_kc.json", pandas.DataFrame)
         self.assertTrue(all(rostdf.eq(xrostdf, axis="columns")), "data does not match")
 
     def test_getRoster_two_team_list(self):
@@ -30,15 +24,25 @@ class TestRoster(unittest.TestCase):
         rostd = obj.getRoster("PIT")
         obj.htmlpath = "tests/data/roster_kc.html"
         rostd = obj.getRoster("KC")
-        xrostd = self.getExpectedResults("tests/data/roster_kc.json")
+        xrostd = getExpectedResults("tests/data/roster_kc.json")
         self.assertEqual(rostd, xrostd)
         
-    @unittest.skip("unset to run test that actually hits the nfl api")
+    @unittest.skip("enable to test hitting the nfl.com site")
     def test_getRoster_one_team_live(self):
         obj = Roster()
         rostd = obj.getRoster("KC")
-        xrostd = self.getExpectedResults("tests/data/roster_kc_20190810.json")
+        xrostd = getExpectedResults("tests/data/roster_kc_20191005.json")
         self.assertEqual(rostd, xrostd)
+
+def getExpectedResults(jspath : str, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+    with open(jspath, "rt") as jfh:
+        xschd = json.load(jfh)
+        for i in range(0, len(xschd)):
+            if xschd[i]["birthdate"] is not None:
+                xschd[i]["birthdate"] = datetime.datetime.strptime(xschd[i]["birthdate"], "%m/%d/%Y")
+    if issubclass(return_type, pandas.DataFrame):
+        xschd = pandas.DataFrame(xschd)
+    return xschd
 
 class MockRoster(Roster):
     def __init__(self, htmlpath : str):
@@ -56,6 +60,7 @@ class MockRoster(Roster):
 
     @htmlpath.setter
     def htmlpath(self, newpath):
+        self._htmlpath = newpath
         with open(newpath, "rt") as fh:
             self._htmlstr = "".join(fh.readlines())
 

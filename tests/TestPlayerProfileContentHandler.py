@@ -17,7 +17,9 @@ class TestPlayerProfileContentHandler(unittest.TestCase):
             "born": "9/17/1995 Tyler, TX",
             "college": "Texas Tech",
             "experience": "3rd season",
-            "high_school": "Whitehouse HS [TX]"
+            "high_school": "Whitehouse HS [TX]",
+            "number": 15,
+            "position": "QB"
         }]
         self.handler.parse(doc)
         self.assertEqual(self.handler.list, exp)
@@ -32,7 +34,9 @@ class TestPlayerProfileContentHandler(unittest.TestCase):
             "born": "9/17/1995 Tyler, TX",
             "college": "Texas Tech",
             "experience": "3rd season",
-            "high_school": "Whitehouse HS [TX]"
+            "high_school": "Whitehouse HS [TX]",
+            "number": 15,
+            "position": "QB"
         }])
         self.handler.parse(doc)
         self.assertTrue(all(self.handler.dataframe.eq(exp, axis="columns")))

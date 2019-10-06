@@ -22,6 +22,13 @@ class PlayerProfileInfoParser(BSTagParser):
         d = {}
         # Each item is contained in a p tag
         for ptag in tag.find_all("p"):
+            pntag = ptag.find_all(lambda qtag: qtag.name == "span" and
+                                               qtag.has_attr("class") and
+                                               qtag["class"] == ["player-number"])
+            if len(pntag) > 0:
+                words = pntag[0].string.split(" ")
+                d["number"] = int(words[0].strip("#"))
+                d["position"] = words[1]
             # The key for the record is contained in a strong tag
             for stag in ptag.find_all("strong"):
                 # Extract the tag text

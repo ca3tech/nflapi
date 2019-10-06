@@ -5,6 +5,14 @@ import pandas
 from nflapi.CachedAPI import ListOrDataFrame
 from nflapi.Team import Team
 from nflapi.Schedule import Schedule
+from nflapi.GameSummary import GameSummary
+from nflapi.GameScore import GameScore
+from nflapi.GamePlay import GamePlay
+from nflapi.GameDrive import GameDrive
+from nflapi.Team import Team
+from nflapi.Roster import Roster
+from nflapi.PlayerProfile import PlayerProfile
+from nflapi.PlayerGameLogs import PlayerGameLogs
 import nflapi.Utilities as util
 
 class Client:
@@ -12,6 +20,13 @@ class Client:
 
     def __init__(self):
         self._schedule = Schedule()
+        self._gmsummary = GameSummary()
+        self._gmscore = GameScore()
+        self._gmplay = GamePlay()
+        self._gmdrive = GameDrive()
+        self._roster = Roster()
+        self._plprof = PlayerProfile()
+        self._plgmlog = PlayerGameLogs()
         self._curdt = datetime.date.today()
 
     def getSchedule(self, season : int = None, season_type : str = None,
@@ -67,8 +82,204 @@ class Client:
                 if week < 0:
                     week = 5 + week
             rslt = sched.getSchedule(season, season_type, week, return_type)
-        if isinstance(return_type, pandas.DataFrame) and not isinstance(rslt, pandas.DataFrame):
-            rslt = pandas.DataFrame(rslt)
+        return self._castReturnType(rslt, return_type)
+
+    def getGameSummary(self, schedules : List[dict], return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Retrieve game summaries
+        
+        This retrieves game summaries for each game in the provide schedules
+
+        Parameters
+        ----------
+        schedules : list of dict
+            List of chedules as returned by `getSchedule` with return_type set to list
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        gsums : List[dict] = []
+        for sched in schedules:
+            gsums.extend(self._gmsummary.getGameSummary(sched, list))
+        return self._castReturnType(gsums, return_type)
+
+    def getGameScore(self, schedules : List[dict], return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Retrieve game scoring information
+        
+        This retrieves game scoring information for each game in the provide schedules
+
+        Parameters
+        ----------
+        schedules : list of dict
+            List of chedules as returned by `getSchedule` with return_type set to list
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        gscores : List[dict] = []
+        for sched in schedules:
+            gscores.extend(self._gmscore.getGameScore(sched, list))
+        return self._castReturnType(gscores, return_type)
+
+    def getGamePlay(self, schedules : List[dict], return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Retrieve play data for games
+        
+        This retrieves play data for each game in the provide schedules
+
+        Parameters
+        ----------
+        schedules : list of dict
+            List of chedules as returned by `getSchedule` with return_type set to list
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        gplays : List[dict] = []
+        for sched in schedules:
+            gplays.extend(self._gmplay.getGamePlay(sched, list))
+        return self._castReturnType(gplays, return_type)
+
+    def getGameDrive(self, schedules : List[dict], return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Retrieve drive data for games
+        
+        This retrieves drive data for each game in the provide schedules
+
+        Parameters
+        ----------
+        schedules : list of dict
+            List of chedules as returned by `getSchedule` with return_type set to list
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        gdrives : List[dict] = []
+        for sched in schedules:
+            gdrives.extend(self._gmdrive.getGameDrive(sched, list))
+        return self._castReturnType(gdrives, return_type)
+
+    def getTeams(self) -> List[str]:
+        """Get the current team abbreviations
+        
+        This will return the abbreviated team names currently
+        used by nfl.com
+        
+        Returns
+        -------
+        list of string
+            The team abbreviations
+        """
+        return Team.teams()
+
+    def getRoster(self, teams : List[str], return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Retrieve team roster
+        
+        Retrieves profile information of players on the provided teams.
+        You will usually want to pass list for the `return_type` as
+        when that is the case the returned data can be used as parameter
+        to other methods.
+
+        Parameters
+        ----------
+        teams : list of str
+            The team abbreviations for which to retrieve rosters.
+            See `Client.getTeams` for the valid values.
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        rosters : List[dict] = []
+        for team in teams:
+            rosters.extend(self._roster.getRoster(team, list))
+        return self._castReturnType(rosters, return_type)
+
+    def getPlayerProfile(self, rosters : List[dict], return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Retrieve player profile information
+        
+        This retrieves player profile information for each item in the provided rosters
+
+        Parameters
+        ----------
+        rosters : list of dict
+            List of roster dicts as returned by `getRoster` with return_type set to list
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        profs : List[dict] = []
+        for rost in rosters:
+            profs.extend(self._plprof.getProfile(rost, list))
+        return self._castReturnType(profs, return_type)
+
+    def getPlayerGameLog(self, rosters : List[dict], season : int = None, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Retrieve player game logs
+        
+        This retrieves player game logs for the given season
+        for each item in the provided rosters
+
+        Parameters
+        ----------
+        rosters : list of dict
+            List of roster dicts as returned by `getRoster` with return_type set to list
+        season : int
+            The season to retrieve data for. If not provided then game
+            log data will be for the current season, or most recently
+            completed season.
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
+        Returns
+        -------
+        list or pandas.DataFrame
+            Which type is returned is determined by the `return_type` parameter
+        """
+        if season is None:
+            season = self._currentSeason
+        gmlogs : List[dict] = []
+        for rost in rosters:
+            gmlogs.extend(self._plgmlog.getGameLogs(rost, season, list))
+        return self._castReturnType(gmlogs, return_type)
+
+    def _castReturnType(self, data : ListOrDataFrame, return_type : ListOrDataFrame) -> ListOrDataFrame:
+        rslt = data
+        if return_type == pandas.DataFrame and not isinstance(data, pandas.DataFrame):
+            rslt = pandas.DataFrame(data)
         return rslt
 
     @property

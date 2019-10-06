@@ -54,25 +54,11 @@ class Roster(CachedAPI):
             Which type is returned is determined by the `return_type` parameter
         """
         assert Team.is_team(team), f"team {team} is not valid"
+        self._handler.team = team
         query = {"team": team}
         rf = RosterRowFilter(team)
         return self._fetch(query, rf, return_type)
 
     def _parseDocument(self, docstr : str):
-        soup = BeautifulSoup(docstr, "html.parser")
-        # Our handler is an xml.sax.ContentHandler.
-        # Therefore we first need to tell it that we
-        # are starting to process a document.
-        # Next we need to pass each putative content
-        # tag to it for data extraction.
-        self._handler.startDocument()
-        for tag in soup.find_all(["meta", "a"]):
-            self._parseTag(tag)
-
-    def _parseTag(self, tag : Tag):
-        # Adapt the BeautifulSoup tag to the xml.sax.ContentHandler
-        # tag processing convention for data extraction.
-        self._handler.startElement(tag.name, tag.attrs)
-        if tag.name == "a":
-            self._handler.characters(str(tag.string))
-        self._handler.endElement(tag.name)
+        self._handler.parse(docstr)
+        

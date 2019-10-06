@@ -9,7 +9,7 @@ class Team(object):
         -------
         list of str
         """
-        return __TEAM__.keys()
+        return list(__TEAM__)
 
     @staticmethod
     def is_team(value : str) -> bool:
