@@ -27,7 +27,9 @@ class PlayerProfileInfoParser(BSTagParser):
                                                qtag["class"] == ["player-number"])
             if len(pntag) > 0:
                 words = pntag[0].string.split(" ")
-                d["number"] = int(words[0].strip("#"))
+                num = words[0].strip("#")
+                if num != "":
+                    d["number"] = int(num)
                 d["position"] = words[1]
             # The key for the record is contained in a strong tag
             for stag in ptag.find_all("strong"):
