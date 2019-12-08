@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 import pandas
 from nflapi.AbstractContentHandler import AbstractContentHandler
 from nflapi.PlayerGameLogsFilter import PlayerGameLogsFilter
@@ -22,9 +22,16 @@ class PlayerGameLogsContentHandler(AbstractContentHandler):
         filter = PlayerGameLogsFilter()
         self._data = []
         for tag in soup.find_all(filter.match):
-            # Parse data from the current table tag
-            parser = PlayerGameLogsParser(self._season)
-            self._data.extend(parser.parse(tag))
+            if tag.name == "select" and tag.has_attr("id") and tag["id"] == "season":
+                sotags = tag.find_all(__selectedOptionFilter__)
+                if len(sotags) > 0:
+                    if int(sotags[0].string) != self._season:
+                        self._data = []
+                        break
+            else:
+                # Parse data from the current table tag
+                parser = PlayerGameLogsParser(self._season)
+                self._data.extend(parser.parse(tag))
 
     @property
     def _season(self) -> int:
@@ -53,3 +60,6 @@ class PlayerGameLogsContentHandler(AbstractContentHandler):
         """
         for d in self.list:
             d.update(src)
+
+def __selectedOptionFilter__(tag : Tag) -> bool:
+    return tag.name == "option" and tag.has_attr("selected")

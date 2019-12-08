@@ -18,4 +18,5 @@ class PlayerGameLogsFilter(BSTagFilter):
         """
         return (tag.name == "table"
                 and tag.has_attr("class") and tag["class"] == ["data-table1"]
-                and tag.has_attr("summary") and tag["summary"].startswith("Game Logs"))
+                and tag.has_attr("summary") and tag["summary"].startswith("Game Logs")) \
+               or (tag.name == "select" and tag.has_attr("id") and tag["id"] == "season")

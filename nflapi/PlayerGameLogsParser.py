@@ -170,6 +170,8 @@ class PlayerGameLogsParser(BSTagParser):
             "kickoffs_ret_avg": self._float_parser,
             "tackles_sck": self._float_parser,
             "interceptions_avg": self._float_parser,
+            "punter_avg": self._float_parser,
+            "punter_net_avg": self._float_parser,
             "default": self._int_parser
         }
         if header in switch.keys():
@@ -182,7 +184,10 @@ class PlayerGameLogsParser(BSTagParser):
         # The text within the second link tag contains
         # the text we are interested in.
         atags = tdtag.find_all("a")
-        return self._getTagText(atags[1], underscores=False, tolower=False)
+        txt = ""
+        if len(atags) > 1:
+            txt = self._getTagText(atags[1], underscores=False, tolower=False)
+        return txt
 
     def _result_parser(self, tdtag : Tag) -> str:
         # The text within the link tag contains
@@ -203,7 +208,8 @@ class PlayerGameLogsParser(BSTagParser):
         if v is not None:
             # Sometimes the integer has a T appended to it,
             # so we need to remove that before converting.
-            v = int(re.sub(r"T$", "", v))
+            v = re.sub(r"T$", "", v)
+            v = int(v)
         return v
 
     def _float_parser(self, tdtag : Tag) -> float:

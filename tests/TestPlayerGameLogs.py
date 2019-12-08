@@ -2,11 +2,12 @@ import unittest
 import json
 import pandas
 import time
+import traceback
 from nflapi.PlayerGameLogs import PlayerGameLogs
 
 class TestPlayerGameLogs(unittest.TestCase):
-    def getRoster(self, profile_name : str) -> str:
-        with open("tests/data/roster_kc.json", "rt") as rfp:
+    def getRoster(self, profile_name : str, filepath : str = "tests/data/roster_kc.json") -> str:
+        with open(filepath, "rt") as rfp:
             roster = json.load(rfp)
             il = [i for i in range(0, len(roster)) if roster[i]["profile_name"] == profile_name]
             return roster[il[0]]
@@ -43,6 +44,12 @@ class TestPlayerGameLogs(unittest.TestCase):
         exp = self.getExpectedList()
         self.assertEqual(got, exp)
 
+    def test_getGameLogs_returns_empty_when_no_season_data(self):
+        roster = self.getRoster("ryanshazier", "tests/data/roster_pit.json")
+        pgl = MockPlayerGameLogs("tests/data/gamelogs_ryan_shazier_2019.html")
+        got = pgl.getGameLogs(roster, 2019, list)
+        self.assertEqual(len(got), 0)
+
     def test_getGameLogs_dataframe(self):
         roster = self.getRoster("patrickmahomes")
         pgl = MockPlayerGameLogs("tests/data/gamelogs_patrick_mahomes_2018.html")
@@ -74,6 +81,21 @@ class TestPlayerGameLogs(unittest.TestCase):
         exp = self.getExpectedList()
         self.assertEqual(pgl._qapi_count, 2, "query count not expected")
         self.assertDictListEqual(got, exp)
+
+    def test_getGameLogs_kc_2017(self):
+        with open("tests/data/roster_kc_20191005.json", "rt") as fp:
+            roster = json.load(fp)
+        pgl = PlayerGameLogs()
+        for r in roster:
+            try:
+                got = pgl.getGameLogs(r, 2017, list)
+            except Exception as e:
+                emsg = "{e}: {tb}".format(e=e, tb=traceback.format_exc())
+                print(emsg)
+                self.assertEqual(emsg, None, "error for {} [{}, {}]: {}".format(r["profile_id"],
+                                                                                r["last_name"],
+                                                                                r["first_name"],
+                                                                                r["gamelogs_url"]))
 
 class MockPlayerGameLogs(PlayerGameLogs):
     def __init__(self, htmlpath : str):
