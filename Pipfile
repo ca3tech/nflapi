@@ -6,10 +6,11 @@ verify_ssl = true
 [dev-packages]
 rope = "*"
 pdoc3 = "*"
+pylint = "*"
 
 [packages]
 nflapi = {path = ".",editable = true}
 pandas = "==0.25"
 
 [requires]
-python_version = "3.7"
+python_version = ">=3.6"

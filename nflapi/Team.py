@@ -118,7 +118,7 @@ __TEAM__ = {
     "JAX": {"name": "Jaguars", "city": "Jacksonville", "state": "Florida", "lat": 30.323889, "lon": -81.6375, "active": True},
     "KC": {"name": "Chiefs", "city": "Kansas City", "state": "Missouri", "lat": 39.048889, "lon": -94.483889, "active": True},
     "LAC": {"name": "Chargers", "city": "Los Angeles", "state": "California", "lat": 33.864, "lon": -118.261, "active": True},
-    "LAR": {"name": "Rams", "city": "Los Angeles", "state": "California", "lat": 34.014167, "lon": -118.287778, "active": True},
+    "LA": {"name": "Rams", "city": "Los Angeles", "state": "California", "lat": 34.014167, "lon": -118.287778, "active": True},
     "MIA": {"name": "Dolphins", "city": "Miami", "state": "Florida", "lat": 25.958056, "lon": -80.238889, "active": True},
     "MIN": {"name": "Vikings", "fullname": "Minnesota Vikings", "city": "Minneapolis", "state": "Minnesota", "lat": 44.974, "lon": -93.258, "active": True},
     "NE": {"name": "Patriots", "fullname": "New England Patriots", "city": "Foxborough", "state": "Massachusetts", "lat": 42.09094432, "lon": -71.264344, "active": True},
