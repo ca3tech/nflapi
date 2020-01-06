@@ -114,7 +114,7 @@ class Team(object):
         return str(self) >= str(other)
 
 __TEAM__ = {
-    "ARI": {"name": "Cardinals", "city": "Phoenix", "state": "Arizona", "lat": 33.5275, "lon": -112.2625, "active": True},
+    "ARI": {"name": "Cardinals", "city": "Phoenix", "fullname": "Arizona Cardinals", "state": "Arizona", "lat": 33.5275, "lon": -112.2625, "active": True},
     "ATL": {"name": "Falcons", "city": "Atlanta", "state": "Georgia", "lat": 33.755, "lon": -84.401, "active": True},
     "BAL": {"name": "Ravens", "city": "Baltimore", "state": "Maryland", "lat": 39.278056, "lon": -76.622778, "active": True},
     "BUF": {"name": "Bills", "city": "Buffalo", "state": "New Yord", "lat": 42.774, "lon": -78.787, "active": True},
