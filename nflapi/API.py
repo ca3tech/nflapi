@@ -1,5 +1,6 @@
 import xml.sax
-from urllib3 import PoolManager
+from urllib3 import PoolManager, HTTPResponse
+import re
 from nflapi.AbstractContentHandler import AbstractContentHandler
 
 class API(object):
@@ -29,7 +30,14 @@ class API(object):
 
     def _queryAPI(self, query_doc : dict = None) -> str:
         rslt = self._http.request("GET", self._url, fields=query_doc)
-        return rslt.data.decode("utf-8")
+        return rslt.data.decode(self._getResponseEncoding(rslt))
+
+    def _getResponseEncoding(self, response : HTTPResponse) -> str:
+        enc = "utf-8"
+        ctype = response.headers["Content-Type"]
+        if re.search(r"charset=", ctype) is not None:
+            enc = re.sub(r"^.+charset=", "", ctype)
+        return enc
 
     def _parseDocument(self, docstr : str):
         """Implement this in your subclass

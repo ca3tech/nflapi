@@ -2,6 +2,7 @@ from typing import List
 import datetime
 from dateutil import relativedelta
 import pandas
+import logging
 from nflapi.CachedAPI import ListOrDataFrame
 from nflapi.Team import Team
 from nflapi.Schedule import Schedule
@@ -234,6 +235,7 @@ class Client:
         """
         rosters : List[dict] = []
         for team in teams:
+            logging.info("Retrieving roster for team {}...".format(team))
             rosters.extend(self._roster.getRoster(team, list))
         return self._castReturnType(rosters, return_type)
 
