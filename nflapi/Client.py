@@ -184,18 +184,30 @@ class Client:
             gdrives.extend(self._gmdrive.getGameDrive(sched, list))
         return self._castReturnType(gdrives, return_type)
 
-    def getTeams(self) -> List[str]:
-        """Get the current team abbreviations
+    def getTeams(self, active_only : bool = True, return_type : ListOrDataFrame = list) -> ListOrDataFrame:
+        """Get the current teams
         
-        This will return the abbreviated team names currently
-        used by nfl.com
-        
+        This will return information about the teams in use by
+        or formerly in use by nfl.com
+
+        Parameters
+        ----------
+        active_only : bool
+            If True then return teams that are currently in use; default True
+        return_type : list or pandas.DataFrame
+            This defines the return type you would like. If the value is list
+            then a list of dicts will be returned, if the value is pandas.DataFrame
+            then a pandas.DataFrame will be returned. The default is list.
+
         Returns
         -------
         list of string
             The team abbreviations
         """
-        return Team.teams()
+        teams = [Team(tabb) for tabb in Team.teams()]
+        if active_only:
+            teams = [t for t in teams if t.is_active]
+        return self._castReturnType([t.__dict__ for t  in teams], return_type)
 
     def getRoster(self, teams : List[str], return_type : ListOrDataFrame = list) -> ListOrDataFrame:
         """Retrieve team roster

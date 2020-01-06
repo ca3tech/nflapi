@@ -70,7 +70,7 @@ class Team(object):
 
     def _get(self, key : str) -> any:
         value = None
-        if value in __TEAM__[self.team].keys():
+        if self.team in __TEAM__ and key in __TEAM__[self.team]:
             value = __TEAM__[self.team][key]
         return value
 
@@ -79,6 +79,19 @@ class Team(object):
 
     def __repr__(self) -> str:
         return f"Team({self.team})"
+
+    @property
+    def __dict__(self) -> dict:
+        return {
+            "team": self.team,
+            "name": self.name,
+            "fullname": self.fullname,
+            "city": self.city,
+            "state": self.state,
+            "latitude": self.latitude,
+            "longitude": self.longitude,
+            "is_active": self.is_active
+        }
 
     # Make objects usable in collections
 
