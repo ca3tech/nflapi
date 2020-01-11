@@ -1,5 +1,6 @@
 import pandas
 import re
+import logging
 from nflapi.CachedAPI import ListOrDataFrame
 from nflapi.GameDataParser import GameDataParser
 import nflapi.Utilities as util
@@ -80,12 +81,16 @@ class GamePlay(GameDataParser):
                 k = re.sub(r"([a-z])([A-Z])", r"\1_\2", k)
                 k = k.lower()
                 if k == "stat_id":
-                    # Now we use the yards value in the srcdata
-                    # Add the statistic flags and the statistic yardage value
-                    vd = sm.values(v, srcdata["yards"])
-                    # Add the statistic metadata
-                    vd.update(util.getStatMetadata(v))
-                    data.update(vd)
+                    try:
+                        # Now we use the yards value in the srcdata
+                        # Add the statistic flags and the statistic yardage value
+                        vd = sm.values(v, srcdata["yards"])
+                        # Add the statistic metadata
+                        vd.update(util.getStatMetadata(v))
+                        data.update(vd)
+                    except AssertionError as e:
+                        logging.warning("Statistic metadata retrieval failed for stat_id {}: {}".format(v, e))
+                        logging.warning("Offending record was {}".format(srcdata))
                 else:
                     if k == "player_name":
                         k = "player_abrv_name"
