@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import json
+import logging
 from nflapi.CachedAPI import CachedAPI, CachedRowFilter, ListOrDataFrame
 from nflapi.PlayerGameLogsContentHandler import PlayerGameLogsContentHandler
 
@@ -64,5 +65,9 @@ class PlayerGameLogs(CachedAPI):
 
     def _parseDocument(self, docstr : str):
         self._handler.parse(docstr)
-        pd = dict((k, self._roster_data[k]) for k in ["first_name", "last_name", "profile_id", "team"])
-        self._handler.mergeData(pd)
+        xkeys = set(["first_name", "last_name", "profile_id", "team"])
+        pd = dict((k, self._roster_data[k]) for k in xkeys if k in self._roster_data)
+        if len(pd) < 4:
+            logging.warn("Roster {} missing expected fields {}".format(self._roster_data, list(xkeys - set(pd.keys()))))
+        if len(pd) > 0:
+            self._handler.mergeData(pd)
