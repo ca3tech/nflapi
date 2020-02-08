@@ -2,6 +2,7 @@ import xml.sax
 from urllib3 import PoolManager, HTTPResponse
 import re
 from nflapi.AbstractContentHandler import AbstractContentHandler
+from nflapi.Exceptions import MissingDocumentException
 
 class API(object):
     """Base class for classes that retrieve data from the NFL APIs"""
@@ -30,6 +31,8 @@ class API(object):
 
     def _queryAPI(self, query_doc : dict = None) -> str:
         rslt = self._http.request("GET", self._url, fields=query_doc)
+        if rslt.status == 404:
+            raise MissingDocumentException("document {} does not exist".format(self._url))
         return rslt.data.decode(self._getResponseEncoding(rslt))
 
     def _getResponseEncoding(self, response : HTTPResponse) -> str:

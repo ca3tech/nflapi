@@ -5,7 +5,9 @@ import time
 from dateutil import relativedelta
 from nflapi.Client import Client
 from nflapi.Schedule import Schedule
+from nflapi.PlayerProfile import PlayerProfile
 import tests.TestSchedule as tsch
+import tests.TestPlayerProfile as tpprof
 
 class TestClient(unittest.TestCase):
 
@@ -104,12 +106,19 @@ class TestClient(unittest.TestCase):
         for st, tester in tstmap.items():
             self.assertTrue(tester(wkmap[st]), f"{st} test failed")
 
+    def test_getPlayerProfile_invalid(self):
+        self.client._playerProfile = tpprof.MockPlayerProfile("tests/data/invalid_profile.html")
+        with open("tests/data/roster_kc.json", "rt") as fp:
+            rosters = [r for r in json.load(fp) if r["profile_name"] == "nickallegretti"]
+        self.assertEqual(self.client.getPlayerProfile(rosters, list), [])
+
 class MockClient(Client):
 
     def __init__(self):
         super(MockClient, self).__init__()
         self._schedule = None
         self._curdt = None
+        self._playerProfile = None
 
     @property
     def _schedule(self) -> tsch.Schedule:
@@ -118,6 +127,14 @@ class MockClient(Client):
     @_schedule.setter
     def _schedule(self, nschedule : tsch.Schedule):
         self._schedule_v = nschedule
+
+    @property
+    def _playerProfile(self) -> PlayerProfile:
+        return self._plprof
+
+    @_playerProfile.setter
+    def _playerProfile(self, npprof : PlayerProfile):
+        self._plprof = npprof
 
     @property
     def _currentDate(self) -> datetime.date:

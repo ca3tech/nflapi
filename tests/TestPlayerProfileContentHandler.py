@@ -41,6 +41,12 @@ class TestPlayerProfileContentHandler(unittest.TestCase):
         self.handler.parse(doc)
         self.assertTrue(all(self.handler.dataframe.eq(exp, axis="columns")))
 
+    def test_parse_invalid_list(self):
+        with open("tests/data/invalid_profile.html", "rt") as fp:
+            doc = "".join(fp.readlines())
+        self.handler.parse(doc)
+        self.assertEqual(self.handler.list, [])
+
 if __name__ == "__main__":
     unittest.main()
 

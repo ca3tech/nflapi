@@ -104,6 +104,11 @@ class TestPlayerProfile(unittest.TestCase):
         self.assertEqual(pp.getProfile(roster, list), exp)
         self.assertEqual(pp.queryAPI_count, 2, "query count not expected after 3rd call")
 
+    def test_getProfile_invalid_list(self):
+        roster = self.getRoster("patrickmahomes")
+        pp = MockPlayerProfile("tests/data/invalid_profile.html")
+        self.assertEqual(pp.getProfile(roster, list), [])
+
 class MockPlayerProfile(PlayerProfile):
     def __init__(self, htmlpath : str):
         super(MockPlayerProfile, self).__init__()
@@ -120,6 +125,7 @@ class MockPlayerProfile(PlayerProfile):
 
     @htmlpath.setter
     def htmlpath(self, newpath):
+        self._htmlpath = newpath
         with open(newpath, "rt") as fh:
             self._htmlstr = "".join(fh.readlines())
 

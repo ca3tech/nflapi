@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import json
+import logging
 from nflapi.CachedAPI import CachedAPI, CachedRowFilter, ListOrDataFrame
 from nflapi.PlayerProfileContentHandler import PlayerProfileContentHandler
 
@@ -60,5 +61,9 @@ class PlayerProfile(CachedAPI):
         # Parse the document with the handler
         self._handler.parse(docstr)
         # Add some of the data from the provided roster record to the profile data
-        pd = dict((k, self._roster_data[k]) for k in ["first_name", "last_name", "number", "position", "profile_id", "team"])
-        self._handler.mergeData(pd)
+        xkeys = set(["first_name", "last_name", "number", "position", "profile_id", "team"])
+        pd = dict((k, self._roster_data[k]) for k in xkeys if k in self._roster_data)
+        if len(pd) < 6:
+            logging.warn("Roster {} missing expected fields {}".format(self._roster_data, list(xkeys - set(pd.keys()))))
+        if len(pd) > 0:
+            self._handler.mergeData(pd)
